@@ -1,0 +1,2222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Fluent 365 Public</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts allow-same-origin allow-downloads allow-modals" referrerpolicy="no-referrer" title="Fluent 365 Public" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Fluent 365 Public&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --radius: var(--border-radius-lg, 12.5px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: 5px;
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: superellipse(1.5);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress {
+  display: flex;
+  height: 6px;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: superellipse(1.5);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: 16px !important;
+  height: 16px !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;fluent365-app&quot;&gt;
+  &lt;style&gt;
+    #fluent365-app {
+      --f365-bg: light-dark(#f4f7f5, #171c19);
+      --f365-paper: light-dark(#ffffff, #232a26);
+      --f365-ink: light-dark(#202722, #eef4f0);
+      --f365-muted: light-dark(#66706a, #a8b3ac);
+      --f365-line: light-dark(#dfe5e1, #3b453f);
+      --f365-green: light-dark(#176b51, #65c6a0);
+      --f365-green-soft: light-dark(#dcefe7, #26493b);
+      --f365-coral: light-dark(#d85f47, #ee8a73);
+      --f365-coral-soft: light-dark(#f9e5df, #533229);
+      --f365-amber: light-dark(#a96f13, #e5b85f);
+      --f365-amber-soft: light-dark(#f8ecd3, #4e4126);
+      --f365-blue: light-dark(#2874a6, #74b9e5);
+      --f365-blue-soft: light-dark(#dfeef7, #264557);
+      color: var(--f365-ink);
+      background: var(--f365-bg);
+      font-family: Inter, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, system-ui, sans-serif;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    #fluent365-app * { box-sizing: border-box; letter-spacing: 0; }
+    #fluent365-app button, #fluent365-app select, #fluent365-app textarea, #fluent365-app input { font: inherit; }
+    #fluent365-app button { color: inherit; }
+    #fluent365-app .f365-top {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 18px 22px; color: #f7fbf8; background: #202923;
+    }
+    #fluent365-app .f365-brand { display: flex; align-items: center; gap: 10px; }
+    #fluent365-app .f365-brand-mark {
+      width: 34px; height: 34px; display: grid; place-items: center;
+      border-radius: 7px; color: #153328; background: #71c8a6; font-weight: 800;
+    }
+    #fluent365-app .f365-brand strong { display: block; font-size: 15px; font-weight: 500; }
+    #fluent365-app .f365-brand small { display: block; margin-top: 2px; color: #9db0a6; font-size: 10px; }
+    #fluent365-app .f365-nav { display: flex; gap: 4px; }
+    #fluent365-app .f365-nav button {
+      display: inline-flex; align-items: center; gap: 6px; padding: 8px 11px; border: 0;
+      border-radius: 6px; color: #aebbb3; background: transparent; cursor: pointer;
+      font-size: 12px; font-weight: 400;
+    }
+    #fluent365-app .f365-nav button[aria-selected=&quot;true&quot;] { color: #fff; background: #35443d; }
+    #fluent365-app .f365-top-tools { display: flex; align-items: center; gap: 14px; }
+    #fluent365-app .f365-data-actions { display: flex; gap: 5px; }
+    #fluent365-app .f365-data-action {
+      display: inline-flex; align-items: center; gap: 5px; padding: 7px 8px; border: 1px solid #4a5851;
+      border-radius: 5px; color: #d9e4de; background: transparent; cursor: pointer; font-size: 9px; white-space: nowrap;
+    }
+    #fluent365-app .f365-data-action:hover { background: #35443d; }
+    #fluent365-app .f365-top-progress { min-width: 118px; text-align: right; }
+    #fluent365-app .f365-top-progress span { display: block; color: #aab8b0; font-size: 10px; }
+    #fluent365-app .f365-top-progress strong { color: #82d0b2; font-size: 12px; font-weight: 500; }
+    #fluent365-app .f365-progress {
+      height: 4px; margin-top: 6px; overflow: hidden; border-radius: 3px; background: rgba(255,255,255,.14);
+    }
+    #fluent365-app .f365-progress i { display: block; width: 0; height: 100%; background: #82d0b2; transition: width .25s ease; }
+    #fluent365-app .f365-main { padding: 22px; }
+    #fluent365-app .f365-view { display: none; }
+    #fluent365-app .f365-view.f365-active { display: block; }
+    #fluent365-app .f365-page-head {
+      display: flex; justify-content: space-between; align-items: end; gap: 18px; margin-bottom: 18px;
+    }
+    #fluent365-app .f365-eyebrow {
+      margin: 0 0 5px; color: var(--f365-green); font-size: 10px; font-weight: 500; text-transform: uppercase;
+    }
+    #fluent365-app h1, #fluent365-app h2, #fluent365-app h3, #fluent365-app h4, #fluent365-app p { letter-spacing: 0; }
+    #fluent365-app .f365-page-head h2 { margin: 0; font-size: 22px; font-weight: 500; }
+    #fluent365-app .f365-streak { color: var(--f365-muted); font-size: 11px; }
+    #fluent365-app .f365-streak strong { color: var(--f365-coral); font-weight: 500; }
+    #fluent365-app .f365-hero {
+      min-height: 240px; display: grid; grid-template-columns: minmax(0, 1fr) 190px;
+      overflow: hidden; border-radius: 8px; color: #f7fbf8; background: #17634d;
+    }
+    #fluent365-app .f365-hero-copy { padding: 28px 30px; }
+    #fluent365-app .f365-hero-meta { display: flex; align-items: center; gap: 12px; color: #b9ded0; font-size: 10px; }
+    #fluent365-app .f365-topic {
+      padding: 6px 9px; border-radius: 5px; color: #f1fff9; background: rgba(255,255,255,.14); font-size: 10px;
+    }
+    #fluent365-app .f365-hero h1 {
+      max-width: 560px; margin: 20px 0 10px; font-family: Georgia, serif;
+      font-size: 34px; line-height: 1.08; font-weight: 400;
+    }
+    #fluent365-app .f365-hero p { max-width: 560px; margin: 0; color: #d1e9e0; font-size: 12px; line-height: 1.7; }
+    #fluent365-app .f365-hero-stats { display: flex; gap: 18px; margin-top: 22px; color: #b9d5cb; font-size: 10px; }
+    #fluent365-app .f365-hero-stats strong { color: #fff; font-size: 13px; font-weight: 500; }
+    #fluent365-app .f365-hero-visual {
+      display: grid; place-items: center; position: relative; overflow: hidden;
+      background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(0,0,0,.18));
+    }
+    #fluent365-app .f365-hero-visual::before,
+    #fluent365-app .f365-hero-visual::after {
+      content: &quot;&quot;; position: absolute; border: 1px solid rgba(255,255,255,.16); border-radius: 50%;
+    }
+    #fluent365-app .f365-hero-visual::before { width: 180px; height: 180px; right: -55px; top: -40px; }
+    #fluent365-app .f365-hero-visual::after { width: 120px; height: 120px; left: -50px; bottom: -44px; }
+    #fluent365-app .f365-hero-icon { width: 58px; height: 58px; color: #b9ebd8; }
+    #fluent365-app .f365-grid { display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 18px; align-items: start; margin-top: 18px; }
+    #fluent365-app .f365-section {
+      margin-bottom: 14px; padding: 22px; border: 1px solid var(--f365-line);
+      border-radius: 8px; background: var(--f365-paper);
+    }
+    #fluent365-app .f365-section-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+    #fluent365-app .f365-section-title { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    #fluent365-app .f365-num {
+      width: 33px; height: 33px; display: grid; place-items: center; flex: 0 0 auto;
+      border-radius: 6px; color: var(--f365-green); background: var(--f365-green-soft); font-size: 10px; font-weight: 500;
+    }
+    #fluent365-app .f365-num.coral { color: var(--f365-coral); background: var(--f365-coral-soft); }
+    #fluent365-app .f365-num.amber { color: var(--f365-amber); background: var(--f365-amber-soft); }
+    #fluent365-app .f365-num.blue { color: var(--f365-blue); background: var(--f365-blue-soft); }
+    #fluent365-app .f365-section h3 { margin: 0 0 3px; font-size: 15px; font-weight: 500; }
+    #fluent365-app .f365-section-head p { margin: 0; color: var(--f365-muted); font-size: 10px; }
+    #fluent365-app .f365-complete {
+      flex: 0 0 auto; border: 0; color: var(--f365-green); background: transparent; cursor: pointer; font-size: 10px;
+    }
+    #fluent365-app .f365-complete::before { content: &quot;○&quot;; margin-right: 5px; }
+    #fluent365-app .f365-complete.f365-done { color: var(--f365-muted); }
+    #fluent365-app .f365-complete.f365-done::before { content: &quot;●&quot;; color: var(--f365-green); }
+    #fluent365-app .f365-schedule {
+      display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--f365-line); border-left: 1px solid var(--f365-line);
+    }
+    #fluent365-app .f365-schedule div { padding: 11px; border-right: 1px solid var(--f365-line); border-bottom: 1px solid var(--f365-line); }
+    #fluent365-app .f365-schedule span { color: var(--f365-green); font-size: 9px; }
+    #fluent365-app .f365-schedule strong { display: block; margin-top: 4px; font-size: 10px; font-weight: 500; }
+    #fluent365-app .f365-paper { padding: 22px 26px; border-left: 3px solid var(--f365-coral); background: light-dark(#fcfaf7, #2c2925); }
+    #fluent365-app .f365-paper-meta { display: flex; justify-content: space-between; color: var(--f365-coral); font-size: 9px; }
+    #fluent365-app .f365-paper h4 { margin: 12px 0 14px; font-family: Georgia, serif; font-size: 21px; line-height: 1.25; font-weight: 400; }
+    #fluent365-app .f365-paper p { margin: 0 0 11px; font-family: Georgia, serif; font-size: 14px; line-height: 1.78; }
+    #fluent365-app .f365-paper p:last-child { margin-bottom: 0; }
+    #fluent365-app .f365-keywords { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    #fluent365-app .f365-word {
+      padding: 6px 8px; border: 0; border-radius: 5px; color: var(--f365-ink);
+      background: var(--f365-bg); cursor: pointer; font-size: 9px;
+    }
+    #fluent365-app .f365-paper { user-select: text; }
+    #fluent365-app .f365-annotation {
+      margin-top: 12px; padding: 15px 16px; border-left: 3px solid var(--f365-green);
+      background: var(--f365-green-soft);
+    }
+    #fluent365-app .f365-annotation-head {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+    }
+    #fluent365-app .f365-annotation-label { display: block; color: var(--f365-green); font-size: 8px; }
+    #fluent365-app .f365-annotation-word {
+      display: block; margin-top: 3px; font-family: Georgia, serif; font-size: 19px; font-weight: 400;
+    }
+    #fluent365-app .f365-annotation-close {
+      width: 28px; height: 28px; display: grid; place-items: center; flex: 0 0 auto;
+      border: 0; border-radius: 5px; color: var(--f365-muted); background: transparent; cursor: pointer;
+    }
+    #fluent365-app .f365-annotation-meaning { margin: 10px 0 0; font-size: 11px; line-height: 1.65; }
+    #fluent365-app .f365-annotation-context {
+      margin: 9px 0 0; padding-left: 10px; border-left: 2px solid color-mix(in srgb, var(--f365-green) 35%, transparent);
+      color: var(--f365-muted); font-family: Georgia, serif; font-size: 10px; line-height: 1.6;
+    }
+    #fluent365-app .f365-annotation-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px; }
+    #fluent365-app .f365-annotation-action {
+      display: inline-flex; align-items: center; gap: 5px; padding: 7px 9px; border: 1px solid var(--f365-line);
+      border-radius: 5px; color: var(--f365-ink); background: var(--f365-paper); cursor: pointer; font-size: 9px;
+    }
+    #fluent365-app .f365-selection-hint { margin: 9px 0 0; color: var(--f365-muted); font-size: 9px; }
+    #fluent365-app .f365-questions { margin-top: 15px; padding-top: 13px; border-top: 1px solid var(--f365-line); }
+    #fluent365-app .f365-questions h4 { margin: 0 0 7px; font-size: 11px; font-weight: 500; }
+    #fluent365-app .f365-questions ol { margin: 0; padding-left: 19px; color: var(--f365-muted); font-size: 10px; line-height: 1.9; }
+    #fluent365-app .f365-player {
+      display: flex; align-items: center; gap: 12px; padding: 15px; border-radius: 7px; color: #fff; background: #2b3430;
+    }
+    #fluent365-app .f365-play {
+      width: 40px; height: 40px; display: grid; place-items: center; flex: 0 0 auto; border: 0; border-radius: 50%;
+      color: #17382b; background: #82d0b2; cursor: pointer;
+    }
+    #fluent365-app .f365-audio-info { flex: 1; min-width: 0; }
+    #fluent365-app .f365-audio-info strong { display: block; font-size: 11px; font-weight: 500; }
+    #fluent365-app .f365-track { height: 4px; margin: 8px 0 5px; overflow: hidden; border-radius: 3px; background: #57625c; }
+    #fluent365-app .f365-track i { display: block; width: 0; height: 100%; background: #82d0b2; }
+    #fluent365-app .f365-audio-info small { color: #9ca8a1; font-size: 9px; }
+    #fluent365-app .f365-rate { border: 1px solid #59635e; border-radius: 4px; padding: 4px; color: #fff; background: #39433e; font-size: 9px; }
+    #fluent365-app .f365-listen-actions { display: flex; gap: 8px; margin-top: 10px; }
+    #fluent365-app .f365-text-button { border: 0; color: var(--f365-green); background: transparent; cursor: pointer; font-size: 10px; }
+    #fluent365-app .f365-transcript { margin-top: 10px; padding: 14px; border-left: 3px solid var(--f365-amber); background: var(--f365-amber-soft); font-family: Georgia, serif; font-size: 12px; line-height: 1.75; }
+    #fluent365-app .f365-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+    #fluent365-app .f365-steps div { padding: 10px; background: var(--f365-bg); }
+    #fluent365-app .f365-steps strong { display: block; margin-bottom: 3px; font-size: 10px; font-weight: 500; }
+    #fluent365-app .f365-steps span { color: var(--f365-muted); font-size: 9px; line-height: 1.5; }
+    #fluent365-app .f365-speaking {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 17px;
+      border-radius: 7px; background: var(--f365-blue-soft);
+    }
+    #fluent365-app .f365-speaking small { color: var(--f365-blue); font-size: 9px; }
+    #fluent365-app .f365-speaking h4 { margin: 7px 0 5px; font-family: Georgia, serif; font-size: 18px; font-weight: 400; }
+    #fluent365-app .f365-speaking p { margin: 0; color: var(--f365-muted); font-size: 9px; }
+    #fluent365-app .f365-timer {
+      width: 78px; height: 60px; flex: 0 0 auto; border: 0; border-radius: 6px; color: #fff; background: #2874a6; cursor: pointer;
+    }
+    #fluent365-app .f365-timer strong, #fluent365-app .f365-timer small { display: block; color: #fff; }
+    #fluent365-app .f365-timer strong { font-size: 16px; font-weight: 500; }
+    #fluent365-app .f365-timer small { margin-top: 2px; font-size: 8px; }
+    #fluent365-app .f365-vocab { width: 100%; border-collapse: collapse; }
+    #fluent365-app .f365-vocab th, #fluent365-app .f365-vocab td { padding: 9px 7px; border-bottom: 1px solid var(--f365-line); text-align: left; font-size: 10px; }
+    #fluent365-app .f365-vocab th { color: var(--f365-muted); font-weight: 400; }
+    #fluent365-app .f365-vocab button { padding: 0; border: 0; color: var(--f365-green); background: transparent; cursor: pointer; font-weight: 500; }
+    #fluent365-app .f365-writing label { display: block; margin-bottom: 9px; font-size: 11px; }
+    #fluent365-app .f365-writing textarea {
+      width: 100%; min-height: 130px; resize: vertical; padding: 12px; border: 1px solid var(--f365-line);
+      border-radius: 6px; color: var(--f365-ink); background: var(--f365-bg); font-size: 11px; line-height: 1.65;
+    }
+    #fluent365-app .f365-writing-foot { display: flex; justify-content: space-between; gap: 10px; margin-top: 7px; color: var(--f365-muted); font-size: 9px; }
+    #fluent365-app .f365-writing-foot strong { color: var(--f365-green); font-weight: 500; }
+    #fluent365-app .f365-review {
+      display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-top: 14px; margin-top: 14px; border-top: 1px solid var(--f365-line);
+    }
+    #fluent365-app .f365-review p { margin: 0; color: var(--f365-muted); font-size: 10px; }
+    #fluent365-app .f365-aside { position: sticky; top: 12px; display: grid; gap: 10px; }
+    #fluent365-app .f365-side-panel { padding: 16px; border: 1px solid var(--f365-line); border-radius: 7px; background: var(--f365-paper); }
+    #fluent365-app .f365-daily-progress { display: flex; align-items: center; gap: 11px; }
+    #fluent365-app .f365-ring {
+      width: 52px; height: 52px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 50%;
+      background: conic-gradient(var(--f365-green) 0deg, var(--f365-line) 0deg); position: relative;
+    }
+    #fluent365-app .f365-ring::after { content: &quot;&quot;; position: absolute; inset: 6px; border-radius: 50%; background: var(--f365-paper); }
+    #fluent365-app .f365-ring span { position: relative; z-index: 1; font-size: 10px; }
+    #fluent365-app .f365-daily-progress strong { font-size: 11px; font-weight: 500; }
+    #fluent365-app .f365-daily-progress p { margin: 3px 0 0; color: var(--f365-muted); font-size: 9px; }
+    #fluent365-app .f365-side-panel &gt; small { color: var(--f365-coral); font-size: 9px; }
+    #fluent365-app .f365-side-panel &gt; p { margin: 7px 0 0; color: var(--f365-muted); font-size: 10px; line-height: 1.65; }
+    #fluent365-app .f365-checkin, #fluent365-app .f365-primary {
+      border: 0; border-radius: 6px; color: #fff; background: #176b51; cursor: pointer; font-weight: 500;
+    }
+    #fluent365-app .f365-checkin { width: 100%; padding: 12px; font-size: 11px; }
+    #fluent365-app .f365-checkin:disabled { color: #e0e5e2; background: #8b9890; cursor: not-allowed; }
+    #fluent365-app .f365-save { margin: 0; color: var(--f365-muted); font-size: 8px; text-align: center; }
+    #fluent365-app .f365-month-switch { display: flex; align-items: center; gap: 9px; }
+    #fluent365-app .f365-month-switch button {
+      width: 30px; height: 30px; border: 1px solid var(--f365-line); border-radius: 5px;
+      background: var(--f365-paper); cursor: pointer;
+    }
+    #fluent365-app .f365-month-switch strong { min-width: 52px; text-align: center; font-size: 11px; font-weight: 500; }
+    #fluent365-app .f365-stage {
+      display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center; padding: 20px 22px;
+      border-radius: 8px; color: #f2f7f4; background: #2b3430;
+    }
+    #fluent365-app .f365-stage-index { color: #77caaa; font-family: Georgia, serif; font-size: 34px; }
+    #fluent365-app .f365-stage small { color: #75c2a4; font-size: 8px; }
+    #fluent365-app .f365-stage h3 { margin: 4px 0; font-size: 15px; font-weight: 500; }
+    #fluent365-app .f365-stage p { margin: 0; color: #b7c1bb; font-size: 9px; }
+    #fluent365-app .f365-stage-target { text-align: right; }
+    #fluent365-app .f365-stage-target strong { display: block; font-size: 13px; font-weight: 500; }
+    #fluent365-app .f365-calendar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 12px; }
+    #fluent365-app .f365-day {
+      min-height: 96px; padding: 11px; border: 1px solid var(--f365-line); border-radius: 6px;
+      color: var(--f365-ink); background: var(--f365-paper); cursor: pointer; text-align: left;
+    }
+    #fluent365-app .f365-day:hover { border-color: var(--f365-green); }
+    #fluent365-app .f365-day.f365-current { box-shadow: inset 0 0 0 2px var(--f365-green); }
+    #fluent365-app .f365-day.f365-finished { background: var(--f365-green-soft); }
+    #fluent365-app .f365-day-top { display: flex; justify-content: space-between; font-size: 9px; }
+    #fluent365-app .f365-day-top span:last-child { color: var(--f365-green); }
+    #fluent365-app .f365-day h4 { margin: 14px 0 5px; font-size: 10px; font-weight: 500; }
+    #fluent365-app .f365-day p { margin: 0; color: var(--f365-muted); font-size: 8px; }
+    #fluent365-app .f365-topic-line { width: 20px; height: 3px; margin-top: 9px; border-radius: 2px; background: var(--f365-coral); }
+    #fluent365-app .f365-day[data-topic=&quot;sports&quot;] .f365-topic-line { background: var(--f365-blue); }
+    #fluent365-app .f365-day[data-topic=&quot;learning&quot;] .f365-topic-line { background: #8b6bb1; }
+    #fluent365-app .f365-day[data-topic=&quot;stocks&quot;] .f365-topic-line { background: var(--f365-amber); }
+    #fluent365-app .f365-day[data-topic=&quot;crypto&quot;] .f365-topic-line { background: var(--f365-green); }
+    #fluent365-app .f365-legend { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 12px; color: var(--f365-muted); font-size: 9px; }
+    #fluent365-app .f365-legend i { width: 7px; height: 7px; display: inline-block; margin-right: 4px; border-radius: 50%; }
+    #fluent365-app .f365-exam-intro {
+      display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px;
+      border-radius: 8px; color: #eef5f1; background: #2b3430;
+    }
+    #fluent365-app .f365-exam-intro h3 { max-width: 520px; margin: 16px 0 8px; font-family: Georgia, serif; font-size: 23px; font-weight: 400; }
+    #fluent365-app .f365-exam-intro p { max-width: 540px; margin: 0; color: #b7c1bb; font-size: 10px; line-height: 1.6; }
+    #fluent365-app .f365-exam-meta { display: flex; gap: 14px; margin-top: 16px; font-size: 9px; }
+    #fluent365-app .f365-primary { padding: 10px 16px; font-size: 10px; white-space: nowrap; }
+    #fluent365-app .f365-exam-intro .f365-primary { color: #17382b; background: #82d0b2; }
+    #fluent365-app .f365-exam-toolbar {
+      display: flex; justify-content: space-between; align-items: center; padding: 12px 14px;
+      border: 1px solid var(--f365-line); background: var(--f365-paper); font-size: 10px;
+    }
+    #fluent365-app .f365-exam-part { margin-top: 10px; padding: 20px; border: 1px solid var(--f365-line); background: var(--f365-paper); }
+    #fluent365-app .f365-exam-part h3 { margin: 0 0 5px; font-size: 14px; font-weight: 500; }
+    #fluent365-app .f365-exam-part &gt; p { margin: 0; color: var(--f365-muted); font-size: 9px; }
+    #fluent365-app .f365-exam-passage { margin: 14px 0; padding: 14px; border-left: 3px solid var(--f365-green); background: var(--f365-bg); font-family: Georgia, serif; font-size: 11px; line-height: 1.7; }
+    #fluent365-app .f365-question { padding: 10px 0; border-top: 1px solid var(--f365-line); }
+    #fluent365-app .f365-question &gt; p { margin: 0 0 7px; font-size: 10px; }
+    #fluent365-app .f365-question label { display: block; margin: 5px 0; color: var(--f365-muted); font-size: 9px; }
+    #fluent365-app .f365-question textarea { width: 100%; min-height: 90px; padding: 10px; border: 1px solid var(--f365-line); border-radius: 5px; color: var(--f365-ink); background: var(--f365-bg); }
+    #fluent365-app .f365-exam-audio { margin: 12px 0; border: 0; border-radius: 5px; padding: 9px 12px; color: #fff; background: #2b3430; cursor: pointer; font-size: 9px; }
+    #fluent365-app .f365-range { width: 100%; accent-color: var(--f365-green); }
+    #fluent365-app .f365-rubric { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 10px; }
+    #fluent365-app .f365-rubric div { padding: 9px; background: var(--f365-bg); }
+    #fluent365-app .f365-rubric strong { display: block; color: var(--f365-green); font-size: 9px; font-weight: 500; }
+    #fluent365-app .f365-rubric span { color: var(--f365-muted); font-size: 8px; }
+    #fluent365-app .f365-result { padding: 30px; border: 1px solid var(--f365-line); background: var(--f365-paper); text-align: center; }
+    #fluent365-app .f365-result strong { display: block; color: var(--f365-green); font-family: Georgia, serif; font-size: 48px; font-weight: 400; }
+    #fluent365-app .f365-result h3 { margin: 6px 0; font-size: 16px; font-weight: 500; }
+    #fluent365-app .f365-result p { margin: 0; color: var(--f365-muted); font-size: 10px; }
+    #fluent365-app .f365-toast {
+      position: absolute; right: 16px; bottom: 16px; max-width: 250px; padding: 10px 12px; border-radius: 5px;
+      color: #f7fbf8; background: #202923; font-size: 10px; opacity: 0; pointer-events: none; transform: translateY(8px); transition: .2s ease;
+    }
+    #fluent365-app .f365-toast.f365-show { opacity: 1; transform: translateY(0); }
+    #fluent365-app .f365-hidden { display: none !important; }
+    @media (max-width: 720px) {
+      #fluent365-app .f365-top { align-items: flex-start; flex-wrap: wrap; padding: 15px; }
+      #fluent365-app .f365-nav { order: 3; width: 100%; }
+      #fluent365-app .f365-nav button { flex: 1; justify-content: center; }
+      #fluent365-app .f365-top-tools { order: 2; width: 100%; justify-content: space-between; }
+      #fluent365-app .f365-top-progress { min-width: 90px; }
+      #fluent365-app .f365-main { padding: 15px; }
+      #fluent365-app .f365-hero { grid-template-columns: 1fr; }
+      #fluent365-app .f365-hero-copy { padding: 23px 20px; }
+      #fluent365-app .f365-hero h1 { font-size: 27px; }
+      #fluent365-app .f365-hero-visual { min-height: 90px; }
+      #fluent365-app .f365-grid { grid-template-columns: 1fr; }
+      #fluent365-app .f365-aside { position: static; grid-template-columns: 1fr 1fr; }
+      #fluent365-app .f365-aside .f365-checkin, #fluent365-app .f365-aside .f365-save { grid-column: 1 / -1; }
+      #fluent365-app .f365-calendar { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 460px) {
+      #fluent365-app .f365-page-head { align-items: center; }
+      #fluent365-app .f365-streak { display: none; }
+      #fluent365-app .f365-section { padding: 17px 14px; }
+      #fluent365-app .f365-complete { font-size: 0; }
+      #fluent365-app .f365-complete::before { font-size: 16px; margin: 0; }
+      #fluent365-app .f365-schedule { grid-template-columns: repeat(2, 1fr); }
+      #fluent365-app .f365-steps { grid-template-columns: 1fr; }
+      #fluent365-app .f365-speaking { align-items: flex-start; }
+      #fluent365-app .f365-vocab th:nth-child(3), #fluent365-app .f365-vocab td:nth-child(3) { display: none; }
+      #fluent365-app .f365-aside { grid-template-columns: 1fr; }
+      #fluent365-app .f365-aside .f365-checkin, #fluent365-app .f365-aside .f365-save { grid-column: auto; }
+      #fluent365-app .f365-stage { grid-template-columns: auto 1fr; }
+      #fluent365-app .f365-stage-target { grid-column: 1 / -1; text-align: left; }
+      #fluent365-app .f365-calendar { grid-template-columns: repeat(2, 1fr); }
+      #fluent365-app .f365-exam-intro { align-items: flex-start; flex-direction: column; padding: 22px 18px; }
+      #fluent365-app .f365-rubric { grid-template-columns: repeat(2, 1fr); }
+    }
+  &lt;/style&gt;
+
+  &lt;header class=&quot;f365-top&quot;&gt;
+    &lt;div class=&quot;f365-brand&quot;&gt;
+      &lt;span class=&quot;f365-brand-mark&quot;&gt;F&lt;/span&gt;
+      &lt;span&gt;&lt;strong&gt;Fluent 365&lt;/strong&gt;&lt;small&gt;每天 1-2 小时 · 为真实交流而学&lt;/small&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;nav class=&quot;f365-nav&quot; aria-label=&quot;学习页面&quot;&gt;
+      &lt;button type=&quot;button&quot; data-view=&quot;today&quot; aria-selected=&quot;true&quot;&gt;&lt;i data-lucide=&quot;book-open&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;今日课程&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-view=&quot;calendar&quot; aria-selected=&quot;false&quot;&gt;&lt;i data-lucide=&quot;calendar-days&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;学习日历&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-view=&quot;exam&quot; aria-selected=&quot;false&quot;&gt;&lt;i data-lucide=&quot;clipboard-check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;月度测试&lt;/button&gt;
+    &lt;/nav&gt;
+    &lt;div class=&quot;f365-top-tools&quot;&gt;
+      &lt;div class=&quot;f365-data-actions&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;f365-data-action&quot; id=&quot;f365-export&quot;&gt;&lt;i data-lucide=&quot;download&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;导出进度&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;f365-data-action&quot; id=&quot;f365-import&quot;&gt;&lt;i data-lucide=&quot;upload&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;导入进度&lt;/button&gt;
+        &lt;input class=&quot;f365-hidden&quot; id=&quot;f365-import-file&quot; type=&quot;file&quot; accept=&quot;application/json,.json&quot; aria-label=&quot;选择进度文件&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;f365-top-progress&quot;&gt;
+        &lt;span&gt;年度进度&lt;/span&gt;&lt;strong id=&quot;f365-year-text&quot;&gt;Day 1 / 365&lt;/strong&gt;
+        &lt;div class=&quot;f365-progress&quot;&gt;&lt;i id=&quot;f365-year-bar&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main class=&quot;f365-main&quot;&gt;
+    &lt;section class=&quot;f365-view f365-active&quot; id=&quot;f365-today&quot;&gt;
+      &lt;div class=&quot;f365-page-head&quot;&gt;
+        &lt;div&gt;&lt;p class=&quot;f365-eyebrow&quot; id=&quot;f365-date&quot;&gt;2026年8月19日 · 星期三&lt;/p&gt;&lt;h2&gt;今天，继续开口说&lt;/h2&gt;&lt;/div&gt;
+        &lt;div class=&quot;f365-streak&quot;&gt;连续学习 &lt;strong id=&quot;f365-streak&quot;&gt;0&lt;/strong&gt; 天&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;section class=&quot;f365-hero&quot;&gt;
+        &lt;div class=&quot;f365-hero-copy&quot;&gt;
+          &lt;div class=&quot;f365-hero-meta&quot;&gt;&lt;span class=&quot;f365-topic&quot; id=&quot;f365-topic&quot;&gt;股票 · 风险表达&lt;/span&gt;&lt;span id=&quot;f365-day-label&quot;&gt;DAY 24 / 365&lt;/span&gt;&lt;/div&gt;
+          &lt;h1 id=&quot;f365-lesson-title&quot;&gt;Read the market, not the noise.&lt;/h1&gt;
+          &lt;p id=&quot;f365-subtitle&quot;&gt;今天练习描述市场波动，并用清楚、克制的英语表达投资风险。&lt;/p&gt;
+          &lt;div class=&quot;f365-hero-stats&quot;&gt;&lt;span&gt;&lt;strong&gt;85&lt;/strong&gt; 分钟&lt;/span&gt;&lt;span&gt;&lt;strong&gt;6&lt;/strong&gt; 项任务&lt;/span&gt;&lt;span&gt;&lt;strong id=&quot;f365-level&quot;&gt;B1&lt;/strong&gt; 难度&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;f365-hero-visual&quot;&gt;&lt;i id=&quot;f365-hero-icon&quot; class=&quot;f365-hero-icon&quot; data-lucide=&quot;chart-candlestick&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;div class=&quot;f365-grid&quot;&gt;
+        &lt;div&gt;
+          &lt;section class=&quot;f365-section&quot;&gt;
+            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num&quot;&gt;01&lt;/span&gt;&lt;div&gt;&lt;h3&gt;今日安排&lt;/h3&gt;&lt;p&gt;总时长约 85 分钟，可拆成早晚两段&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;f365-eyebrow&quot;&gt;85 MIN&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-schedule&quot;&gt;
+              &lt;div&gt;&lt;span&gt;15 MIN&lt;/span&gt;&lt;strong&gt;英文阅读&lt;/strong&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;20 MIN&lt;/span&gt;&lt;strong&gt;听力 + 跟读&lt;/strong&gt;&lt;/div&gt;
+              &lt;div&gt;&lt;span&gt;15 MIN&lt;/span&gt;&lt;strong&gt;口语输出&lt;/strong&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;15 MIN&lt;/span&gt;&lt;strong&gt;词汇表达&lt;/strong&gt;&lt;/div&gt;
+              &lt;div&gt;&lt;span&gt;15 MIN&lt;/span&gt;&lt;strong&gt;写作复述&lt;/strong&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;5 MIN&lt;/span&gt;&lt;strong&gt;复盘打卡&lt;/strong&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/section&gt;
+
+          &lt;section class=&quot;f365-section&quot;&gt;
+            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num coral&quot;&gt;02&lt;/span&gt;&lt;div&gt;&lt;h3&gt;15 分钟阅读&lt;/h3&gt;&lt;p id=&quot;f365-reading-guide&quot;&gt;先读懂大意，再关注风险表达&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;reading&quot;&gt;标记完成&lt;/button&gt;&lt;/div&gt;
+            &lt;article class=&quot;f365-paper&quot;&gt;
+              &lt;div class=&quot;f365-paper-meta&quot;&gt;&lt;span id=&quot;f365-category&quot;&gt;MARKETS&lt;/span&gt;&lt;span id=&quot;f365-word-count&quot;&gt;160 WORDS&lt;/span&gt;&lt;/div&gt;
+              &lt;h4 id=&quot;f365-reading-title&quot;&gt;&lt;/h4&gt;
+              &lt;div id=&quot;f365-reading-text&quot;&gt;&lt;/div&gt;
+            &lt;/article&gt;
+            &lt;div class=&quot;f365-keywords&quot; id=&quot;f365-keywords&quot;&gt;&lt;/div&gt;
+            &lt;p class=&quot;f365-selection-hint&quot;&gt;&lt;i data-lucide=&quot;mouse-pointer-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 选中正文中的单词或短语，可查看中文注释并朗读发音。&lt;/p&gt;
+            &lt;aside class=&quot;f365-annotation f365-hidden&quot; id=&quot;f365-annotation&quot; aria-live=&quot;polite&quot;&gt;
+              &lt;div class=&quot;f365-annotation-head&quot;&gt;
+                &lt;div&gt;&lt;span class=&quot;f365-annotation-label&quot;&gt;划词注释&lt;/span&gt;&lt;strong class=&quot;f365-annotation-word&quot; id=&quot;f365-annotation-word&quot;&gt;&lt;/strong&gt;&lt;/div&gt;
+                &lt;button type=&quot;button&quot; class=&quot;f365-annotation-close&quot; id=&quot;f365-annotation-close&quot; aria-label=&quot;关闭注释&quot;&gt;&lt;i data-lucide=&quot;x&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+              &lt;/div&gt;
+              &lt;p class=&quot;f365-annotation-meaning&quot; id=&quot;f365-annotation-meaning&quot;&gt;&lt;/p&gt;
+              &lt;p class=&quot;f365-annotation-context&quot; id=&quot;f365-annotation-context&quot;&gt;&lt;/p&gt;
+              &lt;div class=&quot;f365-annotation-actions&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;f365-annotation-action&quot; id=&quot;f365-annotation-speak&quot;&gt;&lt;i data-lucide=&quot;volume-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;朗读发音&lt;/button&gt;
+
+              &lt;/div&gt;
+            &lt;/aside&gt;
+            &lt;div class=&quot;f365-questions&quot;&gt;&lt;h4&gt;读后问题&lt;/h4&gt;&lt;ol id=&quot;f365-reading-questions&quot;&gt;&lt;/ol&gt;&lt;/div&gt;
+          &lt;/section&gt;
+
+          &lt;section class=&quot;f365-section&quot;&gt;
+            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num amber&quot;&gt;03&lt;/span&gt;&lt;div&gt;&lt;h3&gt;听力与跟读&lt;/h3&gt;&lt;p&gt;浏览器直接播放 · 约 1-3 分钟&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;listening&quot;&gt;标记完成&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-player&quot;&gt;
+              &lt;button type=&quot;button&quot; class=&quot;f365-play&quot; id=&quot;f365-play&quot; aria-label=&quot;播放听力&quot;&gt;&lt;i data-lucide=&quot;play&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+              &lt;div class=&quot;f365-audio-info&quot;&gt;&lt;strong id=&quot;f365-listening-title&quot;&gt;&lt;/strong&gt;&lt;div class=&quot;f365-track&quot;&gt;&lt;i id=&quot;f365-audio-bar&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;small id=&quot;f365-audio-status&quot;&gt;准备播放&lt;/small&gt;&lt;/div&gt;
+              &lt;select class=&quot;f365-rate&quot; id=&quot;f365-rate&quot; aria-label=&quot;听力语速&quot;&gt;&lt;option value=&quot;.75&quot;&gt;0.75×&lt;/option&gt;&lt;option value=&quot;.9&quot; selected&gt;0.9×&lt;/option&gt;&lt;option value=&quot;1&quot;&gt;1.0×&lt;/option&gt;&lt;option value=&quot;1.15&quot;&gt;1.15×&lt;/option&gt;&lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;f365-listen-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;f365-text-button&quot; id=&quot;f365-transcript-toggle&quot;&gt;显示听力原文&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;f365-text-button&quot; id=&quot;f365-sentence-play&quot;&gt;逐句跟读&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-transcript f365-hidden&quot; id=&quot;f365-transcript&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-steps&quot;&gt;&lt;div&gt;&lt;strong&gt;1 · 盲听&lt;/strong&gt;&lt;span&gt;不看原文听一遍，记下关键词。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;2 · 跟读&lt;/strong&gt;&lt;span&gt;逐句模仿重音、语调和停顿。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;3 · 复述&lt;/strong&gt;&lt;span&gt;用 4-5 句话说出核心信息。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-questions&quot;&gt;&lt;h4&gt;听力问题&lt;/h4&gt;&lt;ol id=&quot;f365-listening-questions&quot;&gt;&lt;/ol&gt;&lt;/div&gt;
+          &lt;/section&gt;
+
+          &lt;section class=&quot;f365-section&quot;&gt;
+            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num blue&quot;&gt;04&lt;/span&gt;&lt;div&gt;&lt;h3&gt;90 秒口语&lt;/h3&gt;&lt;p&gt;先完整表达，再修正语法&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;speaking&quot;&gt;标记完成&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-speaking&quot;&gt;
+              &lt;div&gt;&lt;small&gt;TODAY&#x27;S PROMPT&lt;/small&gt;&lt;h4 id=&quot;f365-speaking-prompt&quot;&gt;&lt;/h4&gt;&lt;p id=&quot;f365-speaking-hints&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+              &lt;button type=&quot;button&quot; class=&quot;f365-timer&quot; id=&quot;f365-speaking-timer&quot;&gt;&lt;strong id=&quot;f365-timer-value&quot;&gt;01:30&lt;/strong&gt;&lt;small&gt;开始计时&lt;/small&gt;&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/section&gt;
+
+          &lt;section class=&quot;f365-section&quot;&gt;
+            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num&quot;&gt;05&lt;/span&gt;&lt;div&gt;&lt;h3&gt;实用表达&lt;/h3&gt;&lt;p&gt;点击英文表达可单独朗读&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;vocab&quot;&gt;标记完成&lt;/button&gt;&lt;/div&gt;
+            &lt;table class=&quot;f365-vocab&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;英文表达&lt;/th&gt;&lt;th&gt;中文&lt;/th&gt;&lt;th&gt;例句&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=&quot;f365-vocab-body&quot;&gt;&lt;/tbody&gt;&lt;/table&gt;
+          &lt;/section&gt;
+
+          &lt;section class=&quot;f365-section&quot;&gt;
+            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num coral&quot;&gt;06&lt;/span&gt;&lt;div&gt;&lt;h3&gt;写作与复盘&lt;/h3&gt;&lt;p&gt;写完后大声读一遍&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;writing&quot;&gt;标记完成&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-writing&quot;&gt;
+              &lt;label for=&quot;f365-writing&quot; id=&quot;f365-writing-prompt&quot;&gt;&lt;/label&gt;
+              &lt;textarea id=&quot;f365-writing&quot; placeholder=&quot;Start writing in English...&quot;&gt;&lt;/textarea&gt;
+              &lt;div class=&quot;f365-writing-foot&quot;&gt;&lt;span&gt;建议使用今天的 3 个新表达&lt;/span&gt;&lt;strong&gt;&lt;span id=&quot;f365-writing-count&quot;&gt;0&lt;/span&gt; / 80 words&lt;/strong&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;f365-review&quot;&gt;&lt;p&gt;5 分钟复盘：说出今天学到的 3 个表达，并各造一个新句子。&lt;/p&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;review&quot;&gt;完成复盘&lt;/button&gt;&lt;/div&gt;
+          &lt;/section&gt;
+        &lt;/div&gt;
+
+        &lt;aside class=&quot;f365-aside&quot;&gt;
+          &lt;div class=&quot;f365-side-panel f365-daily-progress&quot;&gt;&lt;div class=&quot;f365-ring&quot; id=&quot;f365-ring&quot;&gt;&lt;span id=&quot;f365-percent&quot;&gt;0%&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;今日进度&lt;/strong&gt;&lt;p&gt;&lt;span id=&quot;f365-done&quot;&gt;0&lt;/span&gt; / 6 项已完成&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;f365-side-panel&quot;&gt;&lt;small&gt;今日目标&lt;/small&gt;&lt;p id=&quot;f365-goal&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+          &lt;button type=&quot;button&quot; class=&quot;f365-checkin&quot; id=&quot;f365-checkin&quot;&gt;完成今日打卡&lt;/button&gt;
+          &lt;p class=&quot;f365-save&quot;&gt;记录自动保存在本机浏览器&lt;/p&gt;
+        &lt;/aside&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class=&quot;f365-view&quot; id=&quot;f365-calendar-view&quot;&gt;
+      &lt;div class=&quot;f365-page-head&quot;&gt;
+        &lt;div&gt;&lt;p class=&quot;f365-eyebrow&quot;&gt;YOUR 365-DAY ROUTE&lt;/p&gt;&lt;h2&gt;学习日历&lt;/h2&gt;&lt;/div&gt;
+        &lt;div class=&quot;f365-month-switch&quot;&gt;&lt;button type=&quot;button&quot; id=&quot;f365-prev-month&quot; aria-label=&quot;上一个学习月&quot;&gt;‹&lt;/button&gt;&lt;strong id=&quot;f365-month-label&quot;&gt;第 1 月&lt;/strong&gt;&lt;button type=&quot;button&quot; id=&quot;f365-next-month&quot; aria-label=&quot;下一个学习月&quot;&gt;›&lt;/button&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;section class=&quot;f365-stage&quot;&gt;
+        &lt;span class=&quot;f365-stage-index&quot; id=&quot;f365-stage-index&quot;&gt;01&lt;/span&gt;
+        &lt;div&gt;&lt;small&gt;CURRENT STAGE&lt;/small&gt;&lt;h3 id=&quot;f365-stage-title&quot;&gt;建立开口习惯&lt;/h3&gt;&lt;p id=&quot;f365-stage-description&quot;&gt;用熟悉主题激活已有词汇，从短句表达过渡到 90 秒连续表达。&lt;/p&gt;&lt;/div&gt;
+        &lt;div class=&quot;f365-stage-target&quot;&gt;&lt;strong id=&quot;f365-stage-target&quot;&gt;B1 → B1+&lt;/strong&gt;&lt;small&gt;本月目标&lt;/small&gt;&lt;/div&gt;
+      &lt;/section&gt;
+      &lt;div class=&quot;f365-calendar&quot; id=&quot;f365-calendar&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;f365-legend&quot;&gt;
+        &lt;span&gt;&lt;i style=&quot;background:var(--f365-coral)&quot;&gt;&lt;/i&gt;旅游&lt;/span&gt;&lt;span&gt;&lt;i style=&quot;background:var(--f365-blue)&quot;&gt;&lt;/i&gt;运动&lt;/span&gt;
+        &lt;span&gt;&lt;i style=&quot;background:#8b6bb1&quot;&gt;&lt;/i&gt;学习&lt;/span&gt;&lt;span&gt;&lt;i style=&quot;background:var(--f365-amber)&quot;&gt;&lt;/i&gt;股票&lt;/span&gt;&lt;span&gt;&lt;i style=&quot;background:var(--f365-green)&quot;&gt;&lt;/i&gt;币圈&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class=&quot;f365-view&quot; id=&quot;f365-exam-view&quot;&gt;
+      &lt;div class=&quot;f365-page-head&quot;&gt;&lt;div&gt;&lt;p class=&quot;f365-eyebrow&quot;&gt;MONTHLY CHECKPOINT&lt;/p&gt;&lt;h2&gt;月度英语测试&lt;/h2&gt;&lt;/div&gt;&lt;div class=&quot;f365-streak&quot;&gt;&lt;strong&gt;100&lt;/strong&gt; 总分&lt;/div&gt;&lt;/div&gt;
+      &lt;section class=&quot;f365-exam-intro&quot; id=&quot;f365-exam-intro&quot;&gt;
+        &lt;div&gt;&lt;span class=&quot;f365-topic&quot;&gt;阅读 · 听力 · 口语 · 写作 · 词汇&lt;/span&gt;&lt;h3&gt;检验你是否能把学过的英语真正用出来&lt;/h3&gt;&lt;p&gt;共 5 部分，建议一次完成。客观题自动评分，口语和写作依据标准自评。&lt;/p&gt;&lt;div class=&quot;f365-exam-meta&quot;&gt;&lt;span&gt;45 分钟&lt;/span&gt;&lt;span&gt;5 个部分&lt;/span&gt;&lt;span&gt;80 分达标&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;button type=&quot;button&quot; class=&quot;f365-primary&quot; id=&quot;f365-start-exam&quot;&gt;开始测试&lt;/button&gt;
+      &lt;/section&gt;
+      &lt;div class=&quot;f365-hidden&quot; id=&quot;f365-exam-content&quot;&gt;
+        &lt;div class=&quot;f365-exam-toolbar&quot;&gt;&lt;span&gt;剩余时间 &lt;strong id=&quot;f365-exam-timer&quot;&gt;45:00&lt;/strong&gt;&lt;/span&gt;&lt;button type=&quot;button&quot; class=&quot;f365-primary&quot; id=&quot;f365-submit-exam&quot;&gt;提交测试&lt;/button&gt;&lt;/div&gt;
+        &lt;section class=&quot;f365-exam-part&quot;&gt;
+          &lt;h3&gt;Part 1 · 阅读理解（15 分）&lt;/h3&gt;&lt;p&gt;阅读文章，选择最佳答案。&lt;/p&gt;
+          &lt;div class=&quot;f365-exam-passage&quot;&gt;Many people think fluency means speaking without any mistakes. In reality, fluent speakers still pause, change their words, and sometimes correct themselves. What matters most is whether they can keep the conversation moving. A useful strategy is to learn groups of words, such as “That reminds me of…” or “What I mean is…”. These chunks give the speaker time to think and make ideas easier to connect. Regular short practice is also more effective than one long session each week. Ten focused minutes every day can build stronger habits than two hours on Sunday.&lt;/div&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;p&gt;1. What is the main idea?&lt;/p&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;r1&quot; value=&quot;a&quot;&gt; Fluent speakers never make mistakes.&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;r1&quot; value=&quot;b&quot;&gt; Fluency is about keeping communication moving.&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;r1&quot; value=&quot;c&quot;&gt; Sunday is the best day to study.&lt;/label&gt;&lt;/div&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;p&gt;2. Why are word chunks useful?&lt;/p&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;r2&quot; value=&quot;a&quot;&gt; They help connect ideas and buy thinking time.&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;r2&quot; value=&quot;b&quot;&gt; They remove the need for grammar.&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;r2&quot; value=&quot;c&quot;&gt; They make every sentence longer.&lt;/label&gt;&lt;/div&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;p&gt;3. Which practice routine does the writer prefer?&lt;/p&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;r3&quot; value=&quot;a&quot;&gt; One long session every month.&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;r3&quot; value=&quot;b&quot;&gt; Two hours every Sunday only.&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;r3&quot; value=&quot;c&quot;&gt; Short, focused daily practice.&lt;/label&gt;&lt;/div&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;f365-exam-part&quot;&gt;
+          &lt;h3&gt;Part 2 · 听力理解（15 分）&lt;/h3&gt;&lt;p&gt;播放两遍以内，不看原文完成选择。&lt;/p&gt;
+          &lt;button type=&quot;button&quot; class=&quot;f365-exam-audio&quot; id=&quot;f365-exam-audio&quot;&gt;&lt;i data-lucide=&quot;headphones&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 播放月考听力&lt;/button&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;p&gt;4. Where is the speaker going?&lt;/p&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;l1&quot; value=&quot;a&quot;&gt; Bangkok.&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;l1&quot; value=&quot;b&quot;&gt; Singapore.&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;l1&quot; value=&quot;c&quot;&gt; Tokyo.&lt;/label&gt;&lt;/div&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;p&gt;5. Why did the speaker choose a small hotel?&lt;/p&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;l2&quot; value=&quot;a&quot;&gt; It has a swimming pool.&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;l2&quot; value=&quot;b&quot;&gt; It is near the station.&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;l2&quot; value=&quot;c&quot;&gt; It offers free meals.&lt;/label&gt;&lt;/div&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;p&gt;6. What will the speaker do on Saturday morning?&lt;/p&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;l3&quot; value=&quot;a&quot;&gt; Visit a local market.&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;l3&quot; value=&quot;b&quot;&gt; Attend a business meeting.&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;l3&quot; value=&quot;c&quot;&gt; Watch a football match.&lt;/label&gt;&lt;/div&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;f365-exam-part&quot;&gt;
+          &lt;h3&gt;Part 3 · 词汇表达（20 分）&lt;/h3&gt;&lt;p&gt;选择最自然的表达。&lt;/p&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;p&gt;7. I try to think ___ when the market falls.&lt;/p&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v1&quot; value=&quot;a&quot;&gt; long-term&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v1&quot; value=&quot;b&quot;&gt; long time ago&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v1&quot; value=&quot;c&quot;&gt; at a long&lt;/label&gt;&lt;/div&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;p&gt;8. Could you ___ a good local restaurant?&lt;/p&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v2&quot; value=&quot;a&quot;&gt; recommend&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v2&quot; value=&quot;b&quot;&gt; remember&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v2&quot; value=&quot;c&quot;&gt; repeat&lt;/label&gt;&lt;/div&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;p&gt;9. I exercise three times ___ week.&lt;/p&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v3&quot; value=&quot;a&quot;&gt; in&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v3&quot; value=&quot;b&quot;&gt; a&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v3&quot; value=&quot;c&quot;&gt; at&lt;/label&gt;&lt;/div&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;p&gt;10. It took me a while to get used ___ speaking English.&lt;/p&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v4&quot; value=&quot;a&quot;&gt; for&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v4&quot; value=&quot;b&quot;&gt; with&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v4&quot; value=&quot;c&quot;&gt; to&lt;/label&gt;&lt;/div&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;p&gt;11. Never invest more than you can afford to ___.&lt;/p&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v5&quot; value=&quot;a&quot;&gt; miss&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v5&quot; value=&quot;b&quot;&gt; lose&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;v5&quot; value=&quot;c&quot;&gt; fall&lt;/label&gt;&lt;/div&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;f365-exam-part&quot;&gt;
+          &lt;h3&gt;Part 4 · 口语（25 分）&lt;/h3&gt;&lt;p&gt;录音 2 分钟：Describe a trip you would like to take and explain how you would prepare for it.&lt;/p&gt;
+          &lt;div class=&quot;f365-rubric&quot;&gt;&lt;div&gt;&lt;strong&gt;流利度 10&lt;/strong&gt;&lt;span&gt;停顿少，能持续表达&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;表达 6&lt;/strong&gt;&lt;span&gt;使用具体词汇和连接词&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;准确度 5&lt;/strong&gt;&lt;span&gt;错误不影响理解&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;发音 4&lt;/strong&gt;&lt;span&gt;清楚，有基本重音&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;label for=&quot;f365-speaking-score&quot;&gt;口语自评分：&lt;strong id=&quot;f365-speaking-score-label&quot;&gt;18&lt;/strong&gt; / 25&lt;/label&gt;&lt;input class=&quot;f365-range&quot; id=&quot;f365-speaking-score&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;25&quot; value=&quot;18&quot;&gt;&lt;/div&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;f365-exam-part&quot;&gt;
+          &lt;h3&gt;Part 5 · 写作（25 分）&lt;/h3&gt;&lt;p&gt;用 120-150 词回答：How can a person build a sustainable English learning habit?&lt;/p&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;textarea id=&quot;f365-exam-writing&quot; placeholder=&quot;Write your answer here...&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+          &lt;div class=&quot;f365-rubric&quot;&gt;&lt;div&gt;&lt;strong&gt;内容 10&lt;/strong&gt;&lt;span&gt;观点具体，任务完成&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;结构 6&lt;/strong&gt;&lt;span&gt;段落清楚，衔接自然&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;语言 6&lt;/strong&gt;&lt;span&gt;词汇和句式有变化&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;准确度 3&lt;/strong&gt;&lt;span&gt;拼写语法基本准确&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;f365-question&quot;&gt;&lt;label for=&quot;f365-writing-score&quot;&gt;写作自评分：&lt;strong id=&quot;f365-writing-score-label&quot;&gt;18&lt;/strong&gt; / 25&lt;/label&gt;&lt;input class=&quot;f365-range&quot; id=&quot;f365-writing-score&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;25&quot; value=&quot;18&quot;&gt;&lt;/div&gt;
+        &lt;/section&gt;
+      &lt;/div&gt;
+      &lt;section class=&quot;f365-result f365-hidden&quot; id=&quot;f365-result&quot;&gt;&lt;/section&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+  &lt;div class=&quot;f365-toast&quot; id=&quot;f365-toast&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+
+  &lt;script&gt;
+    (() =&gt; {
+      const root = document.getElementById(&#x27;fluent365-app&#x27;);
+      const now = new Date();
+      let selectedDay = 1;
+      let calendarMonth = 1;
+      let speechTimer = null;
+      let speakingInterval = null;
+      let examInterval = null;
+      let sentenceIndex = 0;
+      const taskNames = [&#x27;reading&#x27;, &#x27;listening&#x27;, &#x27;speaking&#x27;, &#x27;vocab&#x27;, &#x27;writing&#x27;, &#x27;review&#x27;];
+      const topicOrder = [&#x27;travel&#x27;, &#x27;sports&#x27;, &#x27;learning&#x27;, &#x27;stocks&#x27;, &#x27;crypto&#x27;];
+      const topicNames = { travel: &#x27;旅游&#x27;, sports: &#x27;运动&#x27;, learning: &#x27;学习&#x27;, stocks: &#x27;股票&#x27;, crypto: &#x27;币圈&#x27; };
+      const topicIcons = { travel: &#x27;plane&#x27;, sports: &#x27;dumbbell&#x27;, learning: &#x27;graduation-cap&#x27;, stocks: &#x27;chart-candlestick&#x27;, crypto: &#x27;bitcoin&#x27; };
+      let selectedAnnotation = null;
+      const commonAnnotations = {
+        announcement:&#x27;广播；通知&#x27;, nervous:&#x27;紧张的&#x27;, afraid:&#x27;害怕的&#x27;, latest:&#x27;最近的；最新的&#x27;, departure:&#x27;出发；离开&#x27;, employee:&#x27;员工&#x27;,
+        delayed:&#x27;延误的&#x27;, confirm:&#x27;确认&#x27;, security:&#x27;安检；安全&#x27;, complicated:&#x27;复杂的&#x27;, preparation:&#x27;准备&#x27;, calmly:&#x27;冷静地&#x27;, journey:&#x27;旅程&#x27;,
+        exhausted:&#x27;筋疲力尽的&#x27;, sustainable:&#x27;可持续的&#x27;, routine:&#x27;日常安排；固定习惯&#x27;, modest:&#x27;适度的；不夸张的&#x27;, strength:&#x27;力量&#x27;,
+        consistency:&#x27;坚持性；一致性&#x27;, intensity:&#x27;强度&#x27;, maintain:&#x27;维持；坚持&#x27;, regularly:&#x27;有规律地&#x27;, shorten:&#x27;缩短&#x27;,
+        productive:&#x27;有效率的；有成效的&#x27;, misleading:&#x27;可能引起误解的&#x27;, recognize:&#x27;识别；认出&#x27;, recall:&#x27;回忆；主动回想&#x27;, retrieve:&#x27;提取；回想&#x27;,
+        effective:&#x27;有效的&#x27;, original:&#x27;原始的；原文的&#x27;, challenging:&#x27;有挑战性的&#x27;, explain:&#x27;解释&#x27;, compare:&#x27;比较&#x27;,
+        uncertainty:&#x27;不确定性&#x27;, unexpected:&#x27;意外的&#x27;, economic:&#x27;经济的&#x27;, inexperienced:&#x27;缺乏经验的&#x27;, pressure:&#x27;压力&#x27;, earnings:&#x27;收益；公司盈利&#x27;,
+        debt:&#x27;债务&#x27;, competitive:&#x27;有竞争力的&#x27;, sensible:&#x27;明智的；合理的&#x27;, asset:&#x27;资产&#x27;, untouched:&#x27;未动用的&#x27;, patience:&#x27;耐心&#x27;,
+        investment:&#x27;投资&#x27;, investor:&#x27;投资者&#x27;, profit:&#x27;利润&#x27;, losses:&#x27;亏损&#x27;, predict:&#x27;预测&#x27;, research:&#x27;研究；调查&#x27;,
+        transfer:&#x27;转账；转移&#x27;, responsibility:&#x27;责任&#x27;, transaction:&#x27;交易&#x27;, reverse:&#x27;撤销；逆转&#x27;, recovery:&#x27;恢复；找回&#x27;, guaranteed:&#x27;有保证的&#x27;,
+        urgency:&#x27;紧迫感&#x27;, scammer:&#x27;诈骗者&#x27;, official:&#x27;官方的&#x27;, phrase:&#x27;短语；词组&#x27;, wallet:&#x27;钱包&#x27;, funds:&#x27;资金&#x27;,
+        comfortable:&#x27;舒适的&#x27;, technician:&#x27;维修人员；技术人员&#x27;, receptionist:&#x27;前台接待员&#x27;, specific:&#x27;具体的&#x27;, repair:&#x27;维修&#x27;, solution:&#x27;解决办法&#x27;,
+        aggressively:&#x27;积极强硬地&#x27;, turnover:&#x27;失误；营业额（按语境）&#x27;, captain:&#x27;队长&#x27;, encourage:&#x27;鼓励&#x27;, possession:&#x27;球权；拥有&#x27;,
+        colleague:&#x27;同事&#x27;, related:&#x27;相关的&#x27;, exchange:&#x27;交流；交换&#x27;, confidence:&#x27;信心&#x27;, grammar:&#x27;语法&#x27;, &#x27;follow-up&#x27;:&#x27;进一步的；后续的&#x27;,
+        revenue:&#x27;收入；营业额&#x27;, materials:&#x27;原材料&#x27;, salaries:&#x27;工资&#x27;, marketing:&#x27;市场营销&#x27;, efficient:&#x27;高效的&#x27;, loyal:&#x27;忠诚的&#x27;, advantage:&#x27;优势&#x27;,
+        volatility:&#x27;波动性&#x27;, sharply:&#x27;剧烈地&#x27;, volume:&#x27;交易量；音量&#x27;, emotional:&#x27;情绪化的&#x27;, inconsistent:&#x27;不稳定的；不一致的&#x27;, account:&#x27;账户&#x27;
+      };
+
+      const lessons = [
+        {
+          topic:&#x27;travel&#x27;, label:&#x27;旅游 · 机场交流&#x27;, category:&#x27;TRAVEL&#x27;, title:&#x27;Your trip begins before takeoff.&#x27;,
+          subtitle:&#x27;从值机到登机，用自然英语解决机场里的真实问题。&#x27;, guide:&#x27;先快速阅读，再圈出机场场景中的动词短语&#x27;,
+          readingTitle:&#x27;A Smoother Start at the Airport&#x27;,
+          reading:[
+            &#x27;Mia used to feel nervous at airports because she was afraid of missing an announcement or going to the wrong gate. Before her latest trip, she made a simple plan. She checked in online, saved a copy of her boarding pass, and arrived two hours before departure.&#x27;,
+            &#x27;At the counter, an airline employee told her that her flight was slightly delayed. Instead of worrying, Mia confirmed the new boarding time and asked whether the gate had changed. She then walked through security and found a quiet place near the gate.&#x27;,
+            &#x27;The experience taught her that good travel English is not about using difficult words. Clear questions such as “Has the gate changed?” and “When will boarding begin?” are usually enough. Preparation gives travelers more time to listen, think, and respond calmly.&#x27;
+          ],
+          keywords:[[&#x27;check in online&#x27;,&#x27;网上值机&#x27;,&#x27;I checked in online last night.&#x27;],[&#x27;boarding pass&#x27;,&#x27;登机牌&#x27;,&#x27;Keep your boarding pass ready.&#x27;],[&#x27;departure&#x27;,&#x27;出发&#x27;,&#x27;Our departure is at 9 a.m.&#x27;],[&#x27;slightly delayed&#x27;,&#x27;稍有延误&#x27;,&#x27;The flight is slightly delayed.&#x27;],[&#x27;confirm&#x27;,&#x27;确认&#x27;,&#x27;Could you confirm the gate?&#x27;],[&#x27;go through security&#x27;,&#x27;通过安检&#x27;,&#x27;We went through security quickly.&#x27;],[&#x27;boarding&#x27;,&#x27;登机&#x27;,&#x27;Boarding will begin soon.&#x27;],[&#x27;respond calmly&#x27;,&#x27;冷静回应&#x27;,&#x27;Try to respond calmly.&#x27;]],
+          readingQuestions:[&#x27;Why did Mia make a plan before the trip?&#x27;,&#x27;What two things did she confirm after hearing about the delay?&#x27;,&#x27;According to the article, what makes travel English effective?&#x27;],
+          listeningTitle:&#x27;Checking In for a Flight&#x27;,
+          listening:&#x27;Good morning. I would like to check in for flight 218 to Singapore. Here is my passport. I have one suitcase to check and one small bag to carry on. Could I have an aisle seat, if one is available? Thank you. What time does boarding begin? I see that the flight is delayed by twenty minutes. Has the gate changed as well? Great, so I should be at gate twelve by ten thirty. Could you also tell me where the security check is? Thanks for your help.&#x27;,
+          listeningQuestions:[&#x27;Where is the passenger flying?&#x27;,&#x27;What kind of seat does the passenger request?&#x27;,&#x27;Which gate should the passenger go to?&#x27;],
+          speaking:&#x27;Explain how you prepare for an international flight.&#x27;, hints:&#x27;Try: first of all / make sure / in case / before departure&#x27;,
+          writing:&#x27;用 80-100 词写一段机场值机场景对话。&#x27;, goal:&#x27;能在机场完成值机、确认延误并询问登机信息。&#x27;
+        },
+        {
+          topic:&#x27;sports&#x27;, label:&#x27;运动 · 坚持训练&#x27;, category:&#x27;SPORTS&#x27;, title:&#x27;Consistency beats intensity.&#x27;,
+          subtitle:&#x27;学习描述运动习惯、训练目标和身体感受。&#x27;, guide:&#x27;关注频率表达和描述习惯变化的句型&#x27;,
+          readingTitle:&#x27;The Workout You Can Actually Keep&#x27;,
+          reading:[
+            &#x27;Many people begin a new exercise plan with too much energy. They train hard every day, feel exhausted after one week, and then stop completely. A sustainable routine looks different. It begins with a goal that fits real life.&#x27;,
+            &#x27;For example, Daniel wanted to become stronger, but he only had thirty minutes after work. He decided to exercise three times a week. On two days, he did basic strength training. On the third day, he went for a relaxed run. He also tracked how he felt instead of only checking his weight.&#x27;,
+            &#x27;After two months, Daniel was not training like a professional athlete, but he had more energy and rarely skipped a workout. His progress came from consistency, not intensity. A modest plan that lasts is more valuable than a perfect plan that disappears after ten days.&#x27;
+          ],
+          keywords:[[&#x27;exercise plan&#x27;,&#x27;锻炼计划&#x27;,&#x27;My exercise plan is simple.&#x27;],[&#x27;feel exhausted&#x27;,&#x27;感到筋疲力尽&#x27;,&#x27;I felt exhausted after the game.&#x27;],[&#x27;sustainable routine&#x27;,&#x27;可持续习惯&#x27;,&#x27;Build a sustainable routine.&#x27;],[&#x27;fit real life&#x27;,&#x27;适合现实生活&#x27;,&#x27;The plan must fit real life.&#x27;],[&#x27;strength training&#x27;,&#x27;力量训练&#x27;,&#x27;I do strength training twice a week.&#x27;],[&#x27;track progress&#x27;,&#x27;记录进步&#x27;,&#x27;I track my progress every month.&#x27;],[&#x27;skip a workout&#x27;,&#x27;跳过训练&#x27;,&#x27;I rarely skip a workout.&#x27;],[&#x27;consistency&#x27;,&#x27;坚持性&#x27;,&#x27;Consistency matters most.&#x27;]],
+          readingQuestions:[&#x27;Why do some new exercise plans fail quickly?&#x27;,&#x27;How often did Daniel exercise?&#x27;,&#x27;What did Daniel learn about progress?&#x27;],
+          listeningTitle:&#x27;Talking About a Weekly Routine&#x27;,
+          listening:&#x27;I started working out regularly about six months ago. At first, I tried to exercise every day, but that was difficult to maintain. Now I train three times a week. I usually do strength training on Monday and Thursday, and I go for a slow run on Saturday morning. My goal is not to become a professional athlete. I simply want to feel stronger and have more energy during the day. When I am busy, I shorten the workout instead of skipping it. That small change has helped me stay consistent.&#x27;,
+          listeningQuestions:[&#x27;When did the speaker start exercising regularly?&#x27;,&#x27;What does the speaker do on Saturday?&#x27;,&#x27;What does the speaker do when busy?&#x27;],
+          speaking:&#x27;Describe a sport or exercise habit you can maintain.&#x27;, hints:&#x27;Try: three times a week / my main goal is / instead of / it helps me&#x27;,
+          writing:&#x27;用 80-100 词设计一套你能坚持三个月的运动计划。&#x27;, goal:&#x27;能用频率、目标和原因清楚介绍自己的运动习惯。&#x27;
+        },
+        {
+          topic:&#x27;learning&#x27;, label:&#x27;学习 · 主动记忆&#x27;, category:&#x27;LEARNING&#x27;, title:&#x27;Make your memory work.&#x27;,
+          subtitle:&#x27;用英语谈学习方法，并练习解释原因和效果。&#x27;, guide:&#x27;留意比较不同学习方法时使用的连接词&#x27;,
+          readingTitle:&#x27;Why Testing Yourself Helps You Learn&#x27;,
+          reading:[
+            &#x27;Reading the same notes again and again can feel productive, but that feeling may be misleading. When information looks familiar, we often believe we have learned it. However, recognizing an answer is not the same as recalling it without help.&#x27;,
+            &#x27;A more effective method is active recall. After studying a short section, close the book and write down everything you remember. Then compare your answer with the original material. The missing details show you exactly what to review.&#x27;,
+            &#x27;This method may feel harder than rereading because your brain must search for information. That effort is useful. It strengthens the path to the memory and makes the information easier to retrieve later. Short quizzes, flashcards, and spoken summaries are all forms of active recall. The goal is not to prove that you know everything; it is to discover what still needs work.&#x27;
+          ],
+          keywords:[[&#x27;feel productive&#x27;,&#x27;感觉有效率&#x27;,&#x27;Highlighting can feel productive.&#x27;],[&#x27;misleading&#x27;,&#x27;误导性的&#x27;,&#x27;That result may be misleading.&#x27;],[&#x27;recall&#x27;,&#x27;回忆&#x27;,&#x27;Try to recall the main points.&#x27;],[&#x27;without help&#x27;,&#x27;没有帮助&#x27;,&#x27;Can you explain it without help?&#x27;],[&#x27;compare with&#x27;,&#x27;与……比较&#x27;,&#x27;Compare your answer with the text.&#x27;],[&#x27;missing detail&#x27;,&#x27;遗漏细节&#x27;,&#x27;Find the missing details.&#x27;],[&#x27;retrieve&#x27;,&#x27;提取记忆&#x27;,&#x27;It becomes easier to retrieve.&#x27;],[&#x27;active recall&#x27;,&#x27;主动回忆&#x27;,&#x27;Active recall improves memory.&#x27;]],
+          readingQuestions:[&#x27;Why can rereading create a false sense of learning?&#x27;,&#x27;What should a learner do after closing the book?&#x27;,&#x27;Name two forms of active recall from the article.&#x27;],
+          listeningTitle:&#x27;A Student Changes Her Study Method&#x27;,
+          listening:&#x27;Last semester, I spent hours reading my notes, but I forgot a lot during exams. This semester, I changed my method. After each class, I write three questions about the lesson. The next day, I answer them without looking at my notes. If I cannot remember something, I mark it and review only that part. I also explain difficult ideas out loud as if I were teaching a friend. Studying now feels more challenging, but my memory is stronger and I spend less time rereading.&#x27;,
+          listeningQuestions:[&#x27;What problem did the student have last semester?&#x27;,&#x27;How many questions does she write after class?&#x27;,&#x27;Why does she explain ideas out loud?&#x27;],
+          speaking:&#x27;What is the most effective way for you to learn something new?&#x27;, hints:&#x27;Try: I have found that / compared with / the reason is / as a result&#x27;,
+          writing:&#x27;用 80-100 词介绍一种真正适合你的学习方法。&#x27;, goal:&#x27;能比较学习方法，并解释某种方法为什么有效。&#x27;
+        },
+        {
+          topic:&#x27;stocks&#x27;, label:&#x27;股票 · 风险表达&#x27;, category:&#x27;MARKETS&#x27;, title:&#x27;Read the market, not the noise.&#x27;,
+          subtitle:&#x27;练习描述市场波动，并用清楚、克制的英语表达投资风险。&#x27;, guide:&#x27;先读懂大意，再关注风险和长期投资表达&#x27;,
+          readingTitle:&#x27;Why Calm Investors Make Better Decisions&#x27;,
+          reading:[
+            &#x27;Stock prices move every day, sometimes for clear reasons and sometimes because investors react to uncertainty. A company may report strong profits, launch a new product, or face unexpected costs. Interest rates and economic news can also change how people value a business.&#x27;,
+            &#x27;When prices fall suddenly, inexperienced investors often feel pressure to sell. However, a lower price does not always mean that the company has become a bad business. Calm investors separate short-term market noise from long-term facts. They review the company’s earnings, debt, competitive position, and future plans.&#x27;,
+            &#x27;This does not mean ignoring risk. Every investment can lose value, and no one can predict the market perfectly. A sensible investor sets clear limits, avoids putting all their money in one asset, and only invests money they can afford to leave untouched. Good decisions usually come from research and patience, not fear or excitement.&#x27;
+          ],
+          keywords:[[&#x27;stock price&#x27;,&#x27;股价&#x27;,&#x27;The stock price fell today.&#x27;],[&#x27;uncertainty&#x27;,&#x27;不确定性&#x27;,&#x27;Markets dislike uncertainty.&#x27;],[&#x27;strong profits&#x27;,&#x27;强劲利润&#x27;,&#x27;The company reported strong profits.&#x27;],[&#x27;interest rate&#x27;,&#x27;利率&#x27;,&#x27;Interest rates may rise.&#x27;],[&#x27;market noise&#x27;,&#x27;市场噪音&#x27;,&#x27;Ignore short-term market noise.&#x27;],[&#x27;long-term facts&#x27;,&#x27;长期事实&#x27;,&#x27;Focus on long-term facts.&#x27;],[&#x27;set clear limits&#x27;,&#x27;设定明确限制&#x27;,&#x27;I set clear limits before investing.&#x27;],[&#x27;afford to lose&#x27;,&#x27;承受得起损失&#x27;,&#x27;Invest only what you can afford to lose.&#x27;]],
+          readingQuestions:[&#x27;What can cause a stock price to move?&#x27;,&#x27;What information do calm investors review?&#x27;,&#x27;How can an investor control risk?&#x27;],
+          listeningTitle:&#x27;A Short Market Update&#x27;,
+          listening:&#x27;Here is today’s market update. Technology shares fell in early trading after investors reacted to higher interest rate expectations. However, the market recovered part of its losses in the afternoon. Energy companies performed well because oil prices rose for the third day in a row. Analysts reminded new investors not to make decisions based on one day of price movement. They suggested looking at company earnings, debt levels, and long-term plans. Remember that all investments involve risk, and past performance does not guarantee future results.&#x27;,
+          listeningQuestions:[&#x27;Why did technology shares fall early?&#x27;,&#x27;Which companies performed well?&#x27;,&#x27;What three things did analysts suggest reviewing?&#x27;],
+          speaking:&#x27;Why do stock prices move, and how should investors respond?&#x27;, hints:&#x27;Try: in my view / one reason is / however / in the long term&#x27;,
+          writing:&#x27;用 80-100 词写出你对长期投资的看法。&#x27;, goal:&#x27;听懂简短市场播报，并能用 90 秒解释价格波动与风险。&#x27;
+        },
+        {
+          topic:&#x27;crypto&#x27;, label:&#x27;币圈 · 安全意识&#x27;, category:&#x27;CRYPTO&#x27;, title:&#x27;Protect the wallet first.&#x27;,
+          subtitle:&#x27;学习讨论数字资产时最重要的安全与风险表达。&#x27;, guide:&#x27;关注提出建议和说明风险的句型&#x27;,
+          readingTitle:&#x27;Three Habits for Safer Crypto Use&#x27;,
+          reading:[
+            &#x27;Crypto allows people to transfer digital assets without using a traditional bank, but it also gives users more responsibility. If someone loses access to a private wallet or sends funds to the wrong address, the transaction may be impossible to reverse.&#x27;,
+            &#x27;The first safety habit is to protect recovery phrases. They should be stored offline and never shared in a message or website. The second habit is to check every address carefully before confirming a transfer. Many users send a small test amount first. The third habit is to question offers that promise guaranteed returns.&#x27;,
+            &#x27;Scammers often create urgency. They may say an opportunity will disappear in ten minutes or pretend to provide technical support. A careful user slows down, checks information through an official channel, and avoids making financial decisions under pressure. In crypto, security is not a one-time setting. It is a habit used before every transaction.&#x27;
+          ],
+          keywords:[[&#x27;digital asset&#x27;,&#x27;数字资产&#x27;,&#x27;Crypto is a digital asset.&#x27;],[&#x27;private wallet&#x27;,&#x27;私人钱包&#x27;,&#x27;Protect your private wallet.&#x27;],[&#x27;reverse a transaction&#x27;,&#x27;撤销交易&#x27;,&#x27;You cannot always reverse a transaction.&#x27;],[&#x27;recovery phrase&#x27;,&#x27;助记词&#x27;,&#x27;Never share a recovery phrase.&#x27;],[&#x27;confirm a transfer&#x27;,&#x27;确认转账&#x27;,&#x27;Check before you confirm a transfer.&#x27;],[&#x27;test amount&#x27;,&#x27;测试金额&#x27;,&#x27;Send a small test amount first.&#x27;],[&#x27;guaranteed return&#x27;,&#x27;保证回报&#x27;,&#x27;Avoid guaranteed returns.&#x27;],[&#x27;under pressure&#x27;,&#x27;在压力下&#x27;,&#x27;Do not decide under pressure.&#x27;]],
+          readingQuestions:[&#x27;Why do crypto users have more responsibility?&#x27;,&#x27;What should a user do before a large transfer?&#x27;,&#x27;How do scammers create urgency?&#x27;],
+          listeningTitle:&#x27;Avoiding a Fake Support Message&#x27;,
+          listening:&#x27;Yesterday, I received a message from someone who claimed to work for a crypto exchange. The person said there was a problem with my account and asked for my recovery phrase. I did not reply. Instead, I opened the official app and contacted support through its help page. The real support team confirmed that the message was a scam. They reminded me that staff members will never ask for a password or recovery phrase. I blocked the sender and turned on two-factor authentication. The experience showed me that slowing down is often the best security tool.&#x27;,
+          listeningQuestions:[&#x27;Who did the sender claim to be?&#x27;,&#x27;How did the speaker contact real support?&#x27;,&#x27;What security setting did the speaker turn on?&#x27;],
+          speaking:&#x27;What should a new crypto user do to stay safe?&#x27;, hints:&#x27;Try: the first rule is / never share / before you / if something seems&#x27;,
+          writing:&#x27;用 80-100 词写一份给币圈新手的安全提醒。&#x27;, goal:&#x27;能用英语说明钱包安全、诈骗风险和基本防范步骤。&#x27;
+        },
+        {
+          topic:&#x27;travel&#x27;, label:&#x27;旅游 · 酒店入住&#x27;, category:&#x27;TRAVEL&#x27;, title:&#x27;Ask clearly, travel easily.&#x27;,
+          subtitle:&#x27;练习入住酒店、确认设施和礼貌提出请求。&#x27;, guide:&#x27;圈出礼貌请求句型，并朗读三遍&#x27;,
+          readingTitle:&#x27;Solving a Small Hotel Problem&#x27;,
+          reading:[
+            &#x27;When Leo arrived at his hotel in Seoul, the room was clean and comfortable, but the air conditioner did not work. At first, he considered saying nothing because he did not want to complain. After a hot and uncomfortable hour, he called the front desk.&#x27;,
+            &#x27;Leo explained the problem simply: “The air conditioner turns on, but the room is not getting cooler.” The receptionist apologized and offered to send a technician. Leo asked how long the repair might take because he needed to leave for dinner. When the technician could not fix the unit, the hotel moved Leo to another room.&#x27;,
+            &#x27;The conversation was successful because Leo described what happened instead of only saying “It is broken.” He was polite but specific. In service situations, clear details help the other person understand the problem and choose a solution quickly.&#x27;
+          ],
+          keywords:[[&#x27;front desk&#x27;,&#x27;前台&#x27;,&#x27;Call the front desk.&#x27;],[&#x27;air conditioner&#x27;,&#x27;空调&#x27;,&#x27;The air conditioner is not working.&#x27;],[&#x27;get cooler&#x27;,&#x27;变凉&#x27;,&#x27;The room is not getting cooler.&#x27;],[&#x27;apologize&#x27;,&#x27;道歉&#x27;,&#x27;The receptionist apologized.&#x27;],[&#x27;send a technician&#x27;,&#x27;派维修人员&#x27;,&#x27;We can send a technician.&#x27;],[&#x27;how long&#x27;,&#x27;多久&#x27;,&#x27;How long will it take?&#x27;],[&#x27;move to another room&#x27;,&#x27;换房&#x27;,&#x27;Could I move to another room?&#x27;],[&#x27;be specific&#x27;,&#x27;说具体&#x27;,&#x27;Please be specific.&#x27;]],
+          readingQuestions:[&#x27;What was wrong with Leo’s room?&#x27;,&#x27;Why did he ask about the repair time?&#x27;,&#x27;Why was Leo’s explanation effective?&#x27;],
+          listeningTitle:&#x27;Requesting a Quieter Room&#x27;,
+          listening:&#x27;Hello, I checked in about an hour ago, and I am calling from room 607. The room is next to the elevator, so I can hear people talking and doors opening. I have an early meeting tomorrow and need to get some sleep. Would it be possible to move to a quieter room? I do not mind being on a different floor. Yes, I can bring my luggage back to the front desk. Thank you for checking. I appreciate your help.&#x27;,
+          listeningQuestions:[&#x27;Which room is the guest in?&#x27;,&#x27;Why does the guest need sleep?&#x27;,&#x27;What is the guest willing to do?&#x27;],
+          speaking:&#x27;Describe a hotel problem and politely ask for a solution.&#x27;, hints:&#x27;Try: I am calling about / would it be possible / the problem is / I appreciate&#x27;,
+          writing:&#x27;用 80-100 词写一封礼貌的酒店问题邮件。&#x27;, goal:&#x27;能具体描述酒店问题，并礼貌提出可执行的解决请求。&#x27;
+        },
+        {
+          topic:&#x27;sports&#x27;, label:&#x27;运动 · 赛后交流&#x27;, category:&#x27;SPORTS&#x27;, title:&#x27;Talk about the game.&#x27;,
+          subtitle:&#x27;练习描述比赛过程、关键时刻和个人表现。&#x27;, guide:&#x27;关注过去时和转折表达&#x27;,
+          readingTitle:&#x27;A Match That Changed in Five Minutes&#x27;,
+          reading:[
+            &#x27;The university basketball team entered the final quarter eight points behind. Their passes had been slow, and they had missed several easy shots. During a timeout, the coach asked the players to stop worrying about the score and focus on the next possession.&#x27;,
+            &#x27;The change was immediate. The team defended more aggressively and forced two turnovers. Then their captain made a three-point shot, and the crowd became louder. With one minute left, the teams were tied. A younger player who had missed earlier shots scored the final basket.&#x27;,
+            &#x27;After the game, the captain said the victory came from communication. The players called out screens, encouraged each other, and stayed focused after mistakes. The final score was exciting, but the more important lesson was that a game can change when a team responds together instead of blaming individuals.&#x27;
+          ],
+          keywords:[[&#x27;final quarter&#x27;,&#x27;最后一节&#x27;,&#x27;They played well in the final quarter.&#x27;],[&#x27;fall behind&#x27;,&#x27;落后&#x27;,&#x27;The team fell behind early.&#x27;],[&#x27;timeout&#x27;,&#x27;暂停&#x27;,&#x27;The coach called a timeout.&#x27;],[&#x27;focus on&#x27;,&#x27;专注于&#x27;,&#x27;Focus on the next play.&#x27;],[&#x27;force a turnover&#x27;,&#x27;迫使对方失误&#x27;,&#x27;They forced two turnovers.&#x27;],[&#x27;be tied&#x27;,&#x27;打平&#x27;,&#x27;The teams were tied.&#x27;],[&#x27;final basket&#x27;,&#x27;最后一球&#x27;,&#x27;She scored the final basket.&#x27;],[&#x27;blame&#x27;,&#x27;责怪&#x27;,&#x27;Do not blame one player.&#x27;]],
+          readingQuestions:[&#x27;How many points behind was the team?&#x27;,&#x27;What happened after the timeout?&#x27;,&#x27;What did the captain say caused the victory?&#x27;],
+          listeningTitle:&#x27;A Player Describes the Final&#x27;,
+          listening:&#x27;We did not start the match well. Our passes were too slow, and we gave the other team too much space. At halftime, the coach told us to communicate more and play with confidence. In the second half, our defense improved, and we created several good chances. I scored once, but the whole team worked for that goal. The final ten minutes were stressful because we were only one point ahead. When the whistle blew, I felt tired, proud, and relieved.&#x27;,
+          listeningQuestions:[&#x27;What was wrong at the start?&#x27;,&#x27;What improved in the second half?&#x27;,&#x27;How did the player feel at the end?&#x27;],
+          speaking:&#x27;Describe an exciting match you watched or played.&#x27;, hints:&#x27;Try: at first / the turning point was / with minutes left / in the end&#x27;,
+          writing:&#x27;用 80-100 词写一段比赛复盘。&#x27;, goal:&#x27;能按时间顺序描述比赛，并说明关键转折点。&#x27;
+        },
+        {
+          topic:&#x27;learning&#x27;, label:&#x27;学习 · 英语输出&#x27;, category:&#x27;LEARNING&#x27;, title:&#x27;Use English before you feel ready.&#x27;,
+          subtitle:&#x27;练习讨论语言焦虑、输出习惯和真实交流。&#x27;, guide:&#x27;找出描述心理变化的表达&#x27;,
+          readingTitle:&#x27;The Conversation Habit&#x27;,
+          reading:[
+            &#x27;Jun studied English for years, but he avoided speaking because he wanted every sentence to be correct. When a foreign colleague asked a simple question, Jun often gave a one-word answer and ended the conversation quickly.&#x27;,
+            &#x27;He decided to build a small conversation habit. Each workday, he asked or answered one extra question in English. If someone mentioned a weekend plan, he asked where they were going. If a colleague talked about food, he shared a short opinion and asked for a recommendation.&#x27;,
+            &#x27;At first, Jun still paused and made mistakes. However, the conversations became longer because he showed interest. After several weeks, he noticed that useful phrases came to mind faster. He learned that confidence did not appear before practice; it grew because of practice. His goal changed from speaking perfect English to making the other person feel understood.&#x27;
+          ],
+          keywords:[[&#x27;avoid speaking&#x27;,&#x27;避免开口&#x27;,&#x27;Do not avoid speaking.&#x27;],[&#x27;one-word answer&#x27;,&#x27;单词式回答&#x27;,&#x27;Give more than a one-word answer.&#x27;],[&#x27;build a habit&#x27;,&#x27;养成习惯&#x27;,&#x27;I want to build a habit.&#x27;],[&#x27;ask an extra question&#x27;,&#x27;多问一个问题&#x27;,&#x27;Ask one extra question.&#x27;],[&#x27;share an opinion&#x27;,&#x27;分享观点&#x27;,&#x27;Share a short opinion.&#x27;],[&#x27;show interest&#x27;,&#x27;表现出兴趣&#x27;,&#x27;Questions show interest.&#x27;],[&#x27;come to mind&#x27;,&#x27;想到&#x27;,&#x27;The phrase came to mind.&#x27;],[&#x27;feel understood&#x27;,&#x27;感到被理解&#x27;,&#x27;Make people feel understood.&#x27;]],
+          readingQuestions:[&#x27;Why did Jun avoid speaking?&#x27;,&#x27;What daily habit did he build?&#x27;,&#x27;How did his idea of confidence change?&#x27;],
+          listeningTitle:&#x27;Keeping a Conversation Going&#x27;,
+          listening:&#x27;When I meet someone new, I try not to turn the conversation into an interview. I ask a question, listen to the answer, and then share something related about myself. For example, if someone says they enjoy hiking, I might mention a trail I visited last year. Then I ask a follow-up question, such as, “Where do you usually go?” This creates a natural exchange. I do not need perfect grammar. I need to listen carefully and give the other person something they can respond to.&#x27;,
+          listeningQuestions:[&#x27;What does the speaker avoid doing?&#x27;,&#x27;What example topic does the speaker use?&#x27;,&#x27;What does a natural exchange require?&#x27;],
+          speaking:&#x27;How can you keep a conversation with a foreigner going?&#x27;, hints:&#x27;Try: follow-up question / that reminds me of / what about you / show interest&#x27;,
+          writing:&#x27;用 80-100 词写一段初次见面时的自然对话。&#x27;, goal:&#x27;能通过追问、分享和回应把英语对话自然延长。&#x27;
+        },
+        {
+          topic:&#x27;stocks&#x27;, label:&#x27;股票 · 公司分析&#x27;, category:&#x27;MARKETS&#x27;, title:&#x27;Understand the business behind the ticker.&#x27;,
+          subtitle:&#x27;练习用简单英语解释公司收入、成本和竞争优势。&#x27;, guide:&#x27;关注商业分析中的因果表达&#x27;,
+          readingTitle:&#x27;Looking Beyond a Famous Brand&#x27;,
+          reading:[
+            &#x27;A famous brand can attract investors, but popularity alone does not make a company a good investment. Before buying shares, an investor should understand how the company earns money and what could reduce its profits.&#x27;,
+            &#x27;Revenue shows how much money the company brings in, while profit is what remains after costs. Both numbers matter. A business may increase its revenue but still earn less profit if materials, salaries, or marketing become more expensive. Investors also look at debt and cash flow to judge whether the company can handle difficult periods.&#x27;,
+            &#x27;Another useful question is whether competitors can easily copy the product or service. A strong brand, efficient technology, loyal customers, or a large network can give a company an advantage. No single number gives the full answer. Company analysis means connecting several facts and deciding whether the current share price offers a reasonable balance between opportunity and risk.&#x27;
+          ],
+          keywords:[[&#x27;earn money&#x27;,&#x27;赚钱&#x27;,&#x27;How does the company earn money?&#x27;],[&#x27;revenue&#x27;,&#x27;收入&#x27;,&#x27;Revenue increased this year.&#x27;],[&#x27;profit&#x27;,&#x27;利润&#x27;,&#x27;Profit fell because costs rose.&#x27;],[&#x27;cash flow&#x27;,&#x27;现金流&#x27;,&#x27;The company has strong cash flow.&#x27;],[&#x27;handle a difficult period&#x27;,&#x27;度过困难时期&#x27;,&#x27;It can handle a difficult period.&#x27;],[&#x27;loyal customer&#x27;,&#x27;忠实客户&#x27;,&#x27;The brand has loyal customers.&#x27;],[&#x27;competitive advantage&#x27;,&#x27;竞争优势&#x27;,&#x27;Technology gives it an advantage.&#x27;],[&#x27;reasonable balance&#x27;,&#x27;合理平衡&#x27;,&#x27;Look for a reasonable balance.&#x27;]],
+          readingQuestions:[&#x27;Why is brand popularity not enough?&#x27;,&#x27;How can revenue rise while profit falls?&#x27;,&#x27;What can give a company a competitive advantage?&#x27;],
+          listeningTitle:&#x27;Explaining a Company Result&#x27;,
+          listening:&#x27;The company reported higher revenue this quarter, mainly because online sales grew. However, profit was lower than analysts expected. Shipping and advertising costs increased, and the company spent more money opening two new stores. Management said these investments should support growth next year. Investors reacted cautiously because the company also has more debt than it did twelve months ago. The results were not simply good or bad. They showed stronger sales, higher costs, and a plan that will take time to prove.&#x27;,
+          listeningQuestions:[&#x27;Why did revenue increase?&#x27;,&#x27;Which costs increased?&#x27;,&#x27;Why did investors react cautiously?&#x27;],
+          speaking:&#x27;What makes a company a strong long-term business?&#x27;, hints:&#x27;Try: earn revenue / control costs / competitive advantage / on the other hand&#x27;,
+          writing:&#x27;用 80-100 词分析一家你熟悉的公司如何赚钱。&#x27;, goal:&#x27;能区分收入、利润和成本，并简单说明公司的竞争优势。&#x27;
+        },
+        {
+          topic:&#x27;crypto&#x27;, label:&#x27;币圈 · 市场波动&#x27;, category:&#x27;CRYPTO&#x27;, title:&#x27;Volatility is information, not a command.&#x27;,
+          subtitle:&#x27;练习谈论价格波动、情绪和仓位管理。&#x27;, guide:&#x27;关注表达可能性和不确定性的词&#x27;,
+          readingTitle:&#x27;Why Crypto Prices Move So Quickly&#x27;,
+          reading:[
+            &#x27;Crypto markets can move sharply within a few hours. One reason is that they trade around the clock, so news can affect prices at any time. Another reason is that some assets have limited trading volume. A large order can therefore have a bigger effect on the price.&#x27;,
+            &#x27;Emotion also plays an important role. When prices rise quickly, people may buy because they fear missing an opportunity. When prices fall, the same people may sell in panic. Social media can make both reactions stronger by spreading exciting claims before the facts are clear.&#x27;,
+            &#x27;Volatility creates opportunities, but it also increases risk. A trader may be right about the long-term direction and still lose money because the position is too large. Careful participants decide their maximum risk before entering a trade. They understand that a fast-moving price is information about the market, not an instruction to act immediately.&#x27;
+          ],
+          keywords:[[&#x27;move sharply&#x27;,&#x27;剧烈波动&#x27;,&#x27;Prices moved sharply overnight.&#x27;],[&#x27;around the clock&#x27;,&#x27;全天候&#x27;,&#x27;Crypto trades around the clock.&#x27;],[&#x27;trading volume&#x27;,&#x27;交易量&#x27;,&#x27;Trading volume was low.&#x27;],[&#x27;large order&#x27;,&#x27;大额订单&#x27;,&#x27;A large order moved the price.&#x27;],[&#x27;fear missing out&#x27;,&#x27;害怕错过&#x27;,&#x27;People buy because they fear missing out.&#x27;],[&#x27;sell in panic&#x27;,&#x27;恐慌抛售&#x27;,&#x27;Avoid selling in panic.&#x27;],[&#x27;position size&#x27;,&#x27;仓位大小&#x27;,&#x27;Control your position size.&#x27;],[&#x27;maximum risk&#x27;,&#x27;最大风险&#x27;,&#x27;Set your maximum risk.&#x27;]],
+          readingQuestions:[&#x27;Why can a large order move some crypto assets?&#x27;,&#x27;How does social media affect emotion?&#x27;,&#x27;What should a trader decide before entering?&#x27;],
+          listeningTitle:&#x27;A Trader Reduces Risk&#x27;,
+          listening:&#x27;I used to enter trades whenever I saw a price moving quickly. Sometimes I made money, but my decisions were emotional and inconsistent. Now I make a plan before I buy. I decide how much I can lose, where I will exit, and what information would change my opinion. I also use a smaller position when the market is highly volatile. This approach does not remove risk, and I still have losing trades. However, one bad decision can no longer damage my whole account.&#x27;,
+          listeningQuestions:[&#x27;How did the speaker trade in the past?&#x27;,&#x27;What three decisions are made before buying?&#x27;,&#x27;When does the speaker use a smaller position?&#x27;],
+          speaking:&#x27;How should someone respond to a fast-moving crypto market?&#x27;, hints:&#x27;Try: highly volatile / before taking action / limit risk / there is no guarantee&#x27;,
+          writing:&#x27;用 80-100 词说明为什么控制仓位比预测价格更重要。&#x27;, goal:&#x27;能描述市场波动，并用英语说明仓位和风险控制。&#x27;
+        }
+      ];
+
+      const stages = [
+        [&#x27;建立开口习惯&#x27;,&#x27;用熟悉主题激活已有词汇，从短句表达过渡到 90 秒连续表达。&#x27;,&#x27;B1 → B1+&#x27;],
+        [&#x27;扩大高频表达&#x27;,&#x27;积累真实场景中的词块，减少逐字翻译。&#x27;,&#x27;B1+&#x27;],
+        [&#x27;强化听力反应&#x27;,&#x27;适应不同语速，抓住主旨和关键信息。&#x27;,&#x27;B1+ → B2&#x27;],
+        [&#x27;延长自然对话&#x27;,&#x27;学习追问、回应和转换话题，让交流持续。&#x27;,&#x27;B2&#x27;],
+        [&#x27;清楚表达观点&#x27;,&#x27;用原因、例子和对比支持自己的看法。&#x27;,&#x27;B2&#x27;],
+        [&#x27;处理真实场景&#x27;,&#x27;解决旅行、工作和社交中的具体问题。&#x27;,&#x27;B2&#x27;],
+        [&#x27;提升语言准确度&#x27;,&#x27;集中修正常见语法和发音问题。&#x27;,&#x27;B2+&#x27;],
+        [&#x27;理解复杂内容&#x27;,&#x27;阅读和复述更长的观点类材料。&#x27;,&#x27;B2+&#x27;],
+        [&#x27;适应自然语速&#x27;,&#x27;减少对字幕的依赖，提升即时反应。&#x27;,&#x27;B2+&#x27;],
+        [&#x27;深入专业话题&#x27;,&#x27;围绕金融、学习和运动做结构化表达。&#x27;,&#x27;B2+ → C1&#x27;],
+        [&#x27;模拟跨文化交流&#x27;,&#x27;练习礼貌澄清、不同意见和幽默表达。&#x27;,&#x27;C1&#x27;],
+        [&#x27;整合与实战&#x27;,&#x27;用完整对话、演讲和写作检验全年成果。&#x27;,&#x27;稳定 C1&#x27;]
+      ];
+
+      const storageKey = &#x27;fluent365-state&#x27;;
+      function dateKey(date) {
+        return date.getFullYear() + &#x27;-&#x27; + String(date.getMonth() + 1).padStart(2, &#x27;0&#x27;) + &#x27;-&#x27; + String(date.getDate()).padStart(2, &#x27;0&#x27;);
+      }
+      function parseDateKey(value) {
+        const match = /^([0-9]{4})-([0-9]{2})-([0-9]{2})$/.exec(value || &#x27;&#x27;);
+        if (!match) return null;
+        const year = Number(match[1]);
+        const month = Number(match[2]);
+        const day = Number(match[3]);
+        const timestamp = Date.UTC(year, month - 1, day);
+        const parsed = new Date(timestamp);
+        return parsed.getUTCFullYear() === year &amp;&amp; parsed.getUTCMonth() === month - 1 &amp;&amp; parsed.getUTCDate() === day ? timestamp : null;
+      }
+      function emptyState() { return { startedOn:dateKey(now), tasks:{}, writings:{}, completed:[] }; }
+      function normalizeState(value, allowMissingStart = false) {
+        if (!value || typeof value !== &#x27;object&#x27; || Array.isArray(value)) return null;
+        const hasValidStart = typeof value.startedOn === &#x27;string&#x27; &amp;&amp; parseDateKey(value.startedOn) !== null;
+        if (!hasValidStart &amp;&amp; !allowMissingStart) return null;
+        const startedOn = hasValidStart ? value.startedOn : dateKey(now);
+        const tasks = {};
+        if (!value.tasks || typeof value.tasks !== &#x27;object&#x27; || Array.isArray(value.tasks)) return null;
+        for (const [day, entries] of Object.entries(value.tasks)) {
+          const dayNumber = Number(day);
+          if (!Number.isInteger(dayNumber) || dayNumber &lt; 1 || dayNumber &gt; 365 || !Array.isArray(entries)) return null;
+          if (entries.some(task =&gt; !taskNames.includes(task))) return null;
+          tasks[dayNumber] = [...new Set(entries)];
+        }
+        const writings = {};
+        if (!value.writings || typeof value.writings !== &#x27;object&#x27; || Array.isArray(value.writings)) return null;
+        for (const [day, writing] of Object.entries(value.writings)) {
+          const dayNumber = Number(day);
+          if (!Number.isInteger(dayNumber) || dayNumber &lt; 1 || dayNumber &gt; 365 || typeof writing !== &#x27;string&#x27;) return null;
+          writings[dayNumber] = writing;
+        }
+        if (!Array.isArray(value.completed) || value.completed.some(day =&gt; !Number.isInteger(day) || day &lt; 1 || day &gt; 365)) return null;
+        return { startedOn, tasks, writings, completed:[...new Set(value.completed)].sort((a, b) =&gt; a - b) };
+      }
+      function loadState() {
+        try {
+          const saved = JSON.parse(localStorage.getItem(storageKey));
+          if (!saved) return emptyState();
+          return normalizeState(saved, true) || emptyState();
+        } catch (_) { return emptyState(); }
+      }
+      function currentDay(startedOn) {
+        const start = parseDateKey(startedOn);
+        const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+        return Math.max(1, Math.min(365, Math.floor((today - start) / 86400000) + 1));
+      }
+      let state = loadState();
+      selectedDay = currentDay(state.startedOn);
+      calendarMonth = Math.ceil(selectedDay / 30);
+      function saveState() { localStorage.setItem(storageKey, JSON.stringify(state)); }
+      saveState();
+      function exportProgress() {
+        const payload = { app:&#x27;Fluent 365&#x27;, version:1, exportedAt:new Date().toISOString(), state };
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type:&#x27;application/json&#x27; });
+        const link = document.createElement(&#x27;a&#x27;);
+        const objectUrl = URL.createObjectURL(blob);
+        link.href = objectUrl;
+        link.download = &#x27;fluent-365-progress-&#x27; + dateKey(new Date()) + &#x27;.json&#x27;;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() =&gt; URL.revokeObjectURL(objectUrl), 1000);
+        showToast(&#x27;进度文件已导出&#x27;);
+      }
+      async function importProgress(file) {
+        try {
+          const payload = JSON.parse(await file.text());
+          if (!payload || payload.version !== 1 || payload.app !== &#x27;Fluent 365&#x27;) throw new Error(&#x27;format&#x27;);
+          const importedState = normalizeState(payload.state);
+          if (!importedState) throw new Error(&#x27;schema&#x27;);
+          if (!window.confirm(&#x27;导入会替换这台设备上的当前进度，确定继续吗？&#x27;)) return;
+          state = importedState;
+          selectedDay = currentDay(state.startedOn);
+          calendarMonth = Math.ceil(selectedDay / 30);
+          saveState();
+          renderLesson();
+          renderCalendar();
+          switchView(&#x27;today&#x27;);
+          showToast(&#x27;进度已恢复到 Day &#x27; + selectedDay);
+        } catch (_) {
+          showToast(&#x27;导入失败：请选择本网页导出的进度文件&#x27;);
+        } finally {
+          root.querySelector(&#x27;#f365-import-file&#x27;).value = &#x27;&#x27;;
+        }
+      }
+      function lessonFor(day) { return lessons[(day - 1) % lessons.length]; }
+      function taskState(day) { return state.tasks[day] || []; }
+      function words(text) { return text.trim() ? text.trim().split(/\s+/).length : 0; }
+      function showToast(message) {
+        const toast = root.querySelector(&#x27;#f365-toast&#x27;); toast.textContent = message; toast.classList.add(&#x27;f365-show&#x27;);
+        clearTimeout(showToast.timer); showToast.timer = setTimeout(() =&gt; toast.classList.remove(&#x27;f365-show&#x27;), 2200);
+      }
+      function speak(text, rate = .9, onend) {
+        if (!(&#x27;speechSynthesis&#x27; in window)) { showToast(&#x27;当前浏览器不支持语音播放&#x27;); return; }
+        speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text); utterance.lang = &#x27;en-US&#x27;; utterance.rate = rate;
+        utterance.onend = () =&gt; { if (onend) onend(); };
+        speechSynthesis.speak(utterance);
+      }
+      function normalizeTerm(text) {
+        return text.trim().replace(/\s+/g, &#x27; &#x27;).replace(/^[^A-Za-z]+|[^A-Za-z]+$/g, &#x27;&#x27;).toLowerCase();
+      }
+      function findReadingContext(term) {
+        const normalized = normalizeTerm(term);
+        const paragraphs = lessonFor(selectedDay).reading;
+        for (const paragraph of paragraphs) {
+          const sentences = paragraph.match(/[^.!?]+[.!?]+/g) || [paragraph];
+          const sentence = sentences.find(item =&gt; item.toLowerCase().includes(normalized));
+          if (sentence) return sentence.trim();
+        }
+        return &#x27;&#x27;;
+      }
+      function findAnnotation(term) {
+        const normalized = normalizeTerm(term);
+        const lessonEntry = lessonFor(selectedDay).keywords.find(item =&gt; normalizeTerm(item[0]) === normalized);
+        if (lessonEntry) return { meaning: lessonEntry[1], example: lessonEntry[2], known: true };
+        const forms = [
+          normalized,
+          normalized.replace(/&#x27;s$/, &#x27;&#x27;),
+          normalized.replace(/ies$/, &#x27;y&#x27;),
+          normalized.replace(/es$/, &#x27;&#x27;),
+          normalized.replace(/s$/, &#x27;&#x27;),
+          normalized.replace(/ed$/, &#x27;&#x27;),
+          normalized.replace(/ing$/, &#x27;&#x27;)
+        ];
+        const key = forms.find(form =&gt; commonAnnotations[form]);
+        if (key) return { meaning: commonAnnotations[key], example: &#x27;&#x27;, known: true };
+        return { meaning: &#x27;暂未收录固定中文释义。请先根据原句猜测，再点击“详细解释”获取语境说明。&#x27;, example: &#x27;&#x27;, known: false };
+      }
+      function hideAnnotation() {
+        selectedAnnotation = null;
+        const panel = root.querySelector(&#x27;#f365-annotation&#x27;);
+        if (panel) panel.classList.add(&#x27;f365-hidden&#x27;);
+      }
+      function showAnnotation(rawTerm) {
+        const term = rawTerm.trim().replace(/\s+/g, &#x27; &#x27;);
+        if (!term || term.length &gt; 60 || term.split(&#x27; &#x27;).length &gt; 5 || !/[A-Za-z]/.test(term)) return;
+        const annotation = findAnnotation(term);
+        const context = findReadingContext(term);
+        selectedAnnotation = { term, context, meaning: annotation.meaning };
+        root.querySelector(&#x27;#f365-annotation-word&#x27;).textContent = term;
+        root.querySelector(&#x27;#f365-annotation-meaning&#x27;).textContent = annotation.meaning + (annotation.example ? &#x27; 例句：&#x27; + annotation.example : &#x27;&#x27;);
+        root.querySelector(&#x27;#f365-annotation-context&#x27;).textContent = context ? &#x27;原句：&#x27; + context : &#x27;已选择该表达，可点击下方按钮听发音。&#x27;;
+        root.querySelector(&#x27;#f365-annotation&#x27;).classList.remove(&#x27;f365-hidden&#x27;);
+        if (window.lucide) lucide.createIcons({ attrs:{ width:16, height:16 } });
+      }
+      function handleReadingSelection() {
+        const selection = window.getSelection();
+        if (!selection || selection.rangeCount === 0 || selection.isCollapsed) return;
+        const range = selection.getRangeAt(0);
+        const reading = root.querySelector(&#x27;#f365-reading-text&#x27;);
+        if (!reading.contains(range.commonAncestorContainer)) return;
+        showAnnotation(selection.toString());
+      }
+      function renderLesson() {
+        const lesson = lessonFor(selectedDay);
+        const tasks = taskState(selectedDay);
+        const level = selectedDay &lt;= 90 ? &#x27;B1&#x27; : selectedDay &lt;= 210 ? &#x27;B2&#x27; : &#x27;B2+&#x27;;
+        root.querySelector(&#x27;#f365-year-text&#x27;).textContent = &#x27;Day &#x27; + selectedDay + &#x27; / 365&#x27;;
+        root.querySelector(&#x27;#f365-year-bar&#x27;).style.width = Math.round(selectedDay / 365 * 100) + &#x27;%&#x27;;
+        root.querySelector(&#x27;#f365-day-label&#x27;).textContent = &#x27;DAY &#x27; + selectedDay + &#x27; / 365&#x27;;
+        root.querySelector(&#x27;#f365-topic&#x27;).textContent = lesson.label;
+        root.querySelector(&#x27;#f365-lesson-title&#x27;).textContent = lesson.title;
+        root.querySelector(&#x27;#f365-subtitle&#x27;).textContent = lesson.subtitle;
+        root.querySelector(&#x27;#f365-level&#x27;).textContent = level;
+        root.querySelector(&#x27;#f365-reading-guide&#x27;).textContent = lesson.guide;
+        root.querySelector(&#x27;#f365-category&#x27;).textContent = lesson.category;
+        root.querySelector(&#x27;#f365-reading-title&#x27;).textContent = lesson.readingTitle;
+        root.querySelector(&#x27;#f365-reading-text&#x27;).innerHTML = lesson.reading.map(p =&gt; &#x27;&lt;p&gt;&#x27; + p + &#x27;&lt;/p&gt;&#x27;).join(&#x27;&#x27;);
+        root.querySelector(&#x27;#f365-word-count&#x27;).textContent = words(lesson.reading.join(&#x27; &#x27;)) + &#x27; WORDS&#x27;;
+        root.querySelector(&#x27;#f365-keywords&#x27;).innerHTML = lesson.keywords.map((item, index) =&gt; &#x27;&lt;button type=&quot;button&quot; class=&quot;f365-word&quot; data-word=&quot;&#x27; + index + &#x27;&quot;&gt;&#x27; + item[0] + &#x27; · &#x27; + item[1] + &#x27;&lt;/button&gt;&#x27;).join(&#x27;&#x27;);
+        root.querySelector(&#x27;#f365-reading-questions&#x27;).innerHTML = lesson.readingQuestions.map(q =&gt; &#x27;&lt;li&gt;&#x27; + q + &#x27;&lt;/li&gt;&#x27;).join(&#x27;&#x27;);
+        root.querySelector(&#x27;#f365-listening-title&#x27;).textContent = lesson.listeningTitle;
+        root.querySelector(&#x27;#f365-transcript&#x27;).textContent = lesson.listening;
+        root.querySelector(&#x27;#f365-listening-questions&#x27;).innerHTML = lesson.listeningQuestions.map(q =&gt; &#x27;&lt;li&gt;&#x27; + q + &#x27;&lt;/li&gt;&#x27;).join(&#x27;&#x27;);
+        root.querySelector(&#x27;#f365-speaking-prompt&#x27;).textContent = lesson.speaking;
+        root.querySelector(&#x27;#f365-speaking-hints&#x27;).textContent = lesson.hints;
+        root.querySelector(&#x27;#f365-writing-prompt&#x27;).textContent = lesson.writing;
+        root.querySelector(&#x27;#f365-goal&#x27;).textContent = lesson.goal;
+        root.querySelector(&#x27;#f365-vocab-body&#x27;).innerHTML = lesson.keywords.map((item, index) =&gt; &#x27;&lt;tr&gt;&lt;td&gt;&lt;button type=&quot;button&quot; data-vocab=&quot;&#x27; + index + &#x27;&quot;&gt;&#x27; + item[0] + &#x27;&lt;/button&gt;&lt;/td&gt;&lt;td&gt;&#x27; + item[1] + &#x27;&lt;/td&gt;&lt;td&gt;&#x27; + item[2] + &#x27;&lt;/td&gt;&lt;/tr&gt;&#x27;).join(&#x27;&#x27;);
+        const icon = root.querySelector(&#x27;#f365-hero-icon&#x27;); icon.setAttribute(&#x27;data-lucide&#x27;, topicIcons[lesson.topic]);
+        root.querySelector(&#x27;#f365-writing&#x27;).value = state.writings[selectedDay] || &#x27;&#x27;;
+        root.querySelector(&#x27;#f365-writing-count&#x27;).textContent = words(root.querySelector(&#x27;#f365-writing&#x27;).value);
+        root.querySelector(&#x27;#f365-transcript&#x27;).classList.add(&#x27;f365-hidden&#x27;);
+        root.querySelector(&#x27;#f365-transcript-toggle&#x27;).textContent = &#x27;显示听力原文&#x27;;
+        hideAnnotation();
+        root.querySelectorAll(&#x27;.f365-complete&#x27;).forEach(button =&gt; button.classList.toggle(&#x27;f365-done&#x27;, tasks.includes(button.dataset.task)));
+        updateProgress();
+        if (window.lucide) lucide.createIcons({ attrs:{ width:16, height:16 } });
+      }
+      function updateProgress() {
+        const done = taskState(selectedDay).length;
+        const percent = Math.round(done / taskNames.length * 100);
+        root.querySelector(&#x27;#f365-done&#x27;).textContent = done;
+        root.querySelector(&#x27;#f365-percent&#x27;).textContent = percent + &#x27;%&#x27;;
+        root.querySelector(&#x27;#f365-ring&#x27;).style.background = &#x27;conic-gradient(var(--f365-green) &#x27; + (percent * 3.6) + &#x27;deg, var(--f365-line) 0deg)&#x27;;
+        const checked = state.completed.includes(selectedDay);
+        const checkin = root.querySelector(&#x27;#f365-checkin&#x27;);
+        checkin.disabled = done &lt; taskNames.length &amp;&amp; !checked;
+        checkin.textContent = checked ? &#x27;今日已完成 ✓&#x27; : &#x27;完成今日打卡&#x27;;
+        root.querySelector(&#x27;#f365-streak&#x27;).textContent = state.completed.length;
+      }
+      function toggleTask(task) {
+        if (!task) return;
+        const tasks = taskState(selectedDay).slice();
+        const index = tasks.indexOf(task);
+        if (index &gt;= 0) tasks.splice(index, 1); else tasks.push(task);
+        state.tasks[selectedDay] = tasks; saveState(); renderLesson();
+      }
+      function switchView(view) {
+        root.querySelectorAll(&#x27;.f365-nav button&#x27;).forEach(b =&gt; b.setAttribute(&#x27;aria-selected&#x27;, String(b.dataset.view === view)));
+        root.querySelectorAll(&#x27;.f365-view&#x27;).forEach(v =&gt; v.classList.remove(&#x27;f365-active&#x27;));
+        root.querySelector(view === &#x27;today&#x27; ? &#x27;#f365-today&#x27; : view === &#x27;calendar&#x27; ? &#x27;#f365-calendar-view&#x27; : &#x27;#f365-exam-view&#x27;).classList.add(&#x27;f365-active&#x27;);
+        if (view === &#x27;calendar&#x27;) renderCalendar();
+      }
+      function renderCalendar() {
+        calendarMonth = Math.max(1, Math.min(12, calendarMonth));
+        const stage = stages[calendarMonth - 1];
+        root.querySelector(&#x27;#f365-month-label&#x27;).textContent = &#x27;第 &#x27; + calendarMonth + &#x27; 月&#x27;;
+        root.querySelector(&#x27;#f365-stage-index&#x27;).textContent = String(calendarMonth).padStart(2,&#x27;0&#x27;);
+        root.querySelector(&#x27;#f365-stage-title&#x27;).textContent = stage[0];
+        root.querySelector(&#x27;#f365-stage-description&#x27;).textContent = stage[1];
+        root.querySelector(&#x27;#f365-stage-target&#x27;).textContent = stage[2];
+        const start = (calendarMonth - 1) * 30 + 1;
+        const end = calendarMonth === 12 ? 365 : start + 29;
+        let html = &#x27;&#x27;;
+        for (let day = start; day &lt;= end; day++) {
+          const lesson = lessonFor(day);
+          html += &#x27;&lt;button type=&quot;button&quot; class=&quot;f365-day &#x27; + (day === selectedDay ? &#x27;f365-current &#x27; : &#x27;&#x27;) + (state.completed.includes(day) ? &#x27;f365-finished&#x27; : &#x27;&#x27;) + &#x27;&quot; data-day=&quot;&#x27; + day + &#x27;&quot; data-topic=&quot;&#x27; + lesson.topic + &#x27;&quot;&gt;&lt;span class=&quot;f365-day-top&quot;&gt;&lt;span&gt;DAY &#x27; + day + &#x27;&lt;/span&gt;&lt;span&gt;&#x27; + (state.completed.includes(day) ? &#x27;✓&#x27; : &#x27;&#x27;) + &#x27;&lt;/span&gt;&lt;/span&gt;&lt;h4&gt;&#x27; + topicNames[lesson.topic] + &#x27;&lt;/h4&gt;&lt;p&gt;&#x27; + lesson.label.split(&#x27; · &#x27;)[1] + &#x27;&lt;/p&gt;&lt;span class=&quot;f365-topic-line&quot;&gt;&lt;/span&gt;&lt;/button&gt;&#x27;;
+        }
+        root.querySelector(&#x27;#f365-calendar&#x27;).innerHTML = html;
+      }
+      function startListening() {
+        const lesson = lessonFor(selectedDay);
+        const status = root.querySelector(&#x27;#f365-audio-status&#x27;);
+        const bar = root.querySelector(&#x27;#f365-audio-bar&#x27;);
+        const seconds = Math.max(20, lesson.listening.split(/\s+/).length / (150 * Number(root.querySelector(&#x27;#f365-rate&#x27;).value)) * 60);
+        let elapsed = 0; clearInterval(speechTimer); status.textContent = &#x27;正在播放&#x27;;
+        speechTimer = setInterval(() =&gt; { elapsed += .2; bar.style.width = Math.min(100, elapsed / seconds * 100) + &#x27;%&#x27;; }, 200);
+        speak(lesson.listening, Number(root.querySelector(&#x27;#f365-rate&#x27;).value), () =&gt; { clearInterval(speechTimer); bar.style.width = &#x27;100%&#x27;; status.textContent = &#x27;播放完成&#x27;; });
+      }
+      function startSpeakingTimer() {
+        clearInterval(speakingInterval);
+        let remaining = 90;
+        const value = root.querySelector(&#x27;#f365-timer-value&#x27;);
+        const button = root.querySelector(&#x27;#f365-speaking-timer&#x27;);
+        button.querySelector(&#x27;small&#x27;).textContent = &#x27;计时中&#x27;;
+        speakingInterval = setInterval(() =&gt; {
+          remaining -= 1; value.textContent = String(Math.floor(remaining / 60)).padStart(2,&#x27;0&#x27;) + &#x27;:&#x27; + String(remaining % 60).padStart(2,&#x27;0&#x27;);
+          if (remaining &lt;= 0) { clearInterval(speakingInterval); button.querySelector(&#x27;small&#x27;).textContent = &#x27;再次开始&#x27;; showToast(&#x27;90 秒完成，马上用一句话总结你的表现&#x27;); }
+        }, 1000);
+      }
+      function startExam() {
+        root.querySelector(&#x27;#f365-exam-intro&#x27;).classList.add(&#x27;f365-hidden&#x27;);
+        root.querySelector(&#x27;#f365-result&#x27;).classList.add(&#x27;f365-hidden&#x27;);
+        root.querySelector(&#x27;#f365-exam-content&#x27;).classList.remove(&#x27;f365-hidden&#x27;);
+        let remaining = 2700; clearInterval(examInterval);
+        examInterval = setInterval(() =&gt; {
+          remaining -= 1;
+          root.querySelector(&#x27;#f365-exam-timer&#x27;).textContent = String(Math.floor(remaining/60)).padStart(2,&#x27;0&#x27;) + &#x27;:&#x27; + String(remaining%60).padStart(2,&#x27;0&#x27;);
+          if (remaining &lt;= 0) { clearInterval(examInterval); submitExam(); }
+        }, 1000);
+      }
+      function selected(name) { const input = root.querySelector(&#x27;input[name=&quot;&#x27; + name + &#x27;&quot;]:checked&#x27;); return input ? input.value : &#x27;&#x27;; }
+      function submitExam() {
+        clearInterval(examInterval);
+        const answers = {r1:&#x27;b&#x27;,r2:&#x27;a&#x27;,r3:&#x27;c&#x27;,l1:&#x27;b&#x27;,l2:&#x27;b&#x27;,l3:&#x27;a&#x27;,v1:&#x27;a&#x27;,v2:&#x27;a&#x27;,v3:&#x27;b&#x27;,v4:&#x27;c&#x27;,v5:&#x27;b&#x27;};
+        let objective = 0;
+        [&#x27;r1&#x27;,&#x27;r2&#x27;,&#x27;r3&#x27;,&#x27;l1&#x27;,&#x27;l2&#x27;,&#x27;l3&#x27;].forEach(name =&gt; { if (selected(name) === answers[name]) objective += 5; });
+        [&#x27;v1&#x27;,&#x27;v2&#x27;,&#x27;v3&#x27;,&#x27;v4&#x27;,&#x27;v5&#x27;].forEach(name =&gt; { if (selected(name) === answers[name]) objective += 4; });
+        const speaking = Number(root.querySelector(&#x27;#f365-speaking-score&#x27;).value);
+        const writing = Number(root.querySelector(&#x27;#f365-writing-score&#x27;).value);
+        const total = objective + speaking + writing;
+        root.querySelector(&#x27;#f365-exam-content&#x27;).classList.add(&#x27;f365-hidden&#x27;);
+        const result = root.querySelector(&#x27;#f365-result&#x27;);
+        result.innerHTML = &#x27;&lt;strong&gt;&#x27; + total + &#x27;&lt;/strong&gt;&lt;h3&gt;&#x27; + (total &gt;= 80 ? &#x27;本月目标达成&#x27; : total &gt;= 60 ? &#x27;基础已建立，继续巩固&#x27; : &#x27;建议重做本月重点课程&#x27;) + &#x27;&lt;/h3&gt;&lt;p&gt;客观题 &#x27; + objective + &#x27;/50 · 口语 &#x27; + speaking + &#x27;/25 · 写作 &#x27; + writing + &#x27;/25&lt;/p&gt;&lt;button type=&quot;button&quot; class=&quot;f365-primary&quot; id=&quot;f365-restart-exam&quot; style=&quot;margin-top:14px&quot;&gt;重新测试&lt;/button&gt;&#x27;;
+        result.classList.remove(&#x27;f365-hidden&#x27;);
+        root.querySelector(&#x27;#f365-restart-exam&#x27;).addEventListener(&#x27;click&#x27;, startExam);
+      }
+
+      root.querySelectorAll(&#x27;.f365-nav button&#x27;).forEach(button =&gt; button.addEventListener(&#x27;click&#x27;, () =&gt; switchView(button.dataset.view)));
+      root.addEventListener(&#x27;click&#x27;, event =&gt; {
+        const complete = event.target.closest(&#x27;.f365-complete&#x27;); if (complete) toggleTask(complete.dataset.task);
+        const wordButton = event.target.closest(&#x27;[data-word]&#x27;); if (wordButton) { const item = lessonFor(selectedDay).keywords[Number(wordButton.dataset.word)]; speak(item[0] + &#x27;. &#x27; + item[2]); }
+        const vocabButton = event.target.closest(&#x27;[data-vocab]&#x27;); if (vocabButton) { const item = lessonFor(selectedDay).keywords[Number(vocabButton.dataset.vocab)]; speak(item[0] + &#x27;. &#x27; + item[2]); }
+        const dayButton = event.target.closest(&#x27;.f365-day&#x27;); if (dayButton) { selectedDay = Number(dayButton.dataset.day); calendarMonth = Math.ceil(selectedDay/30); renderLesson(); switchView(&#x27;today&#x27;); root.scrollIntoView({behavior:&#x27;smooth&#x27;}); }
+      });
+      root.querySelector(&#x27;#f365-writing&#x27;).addEventListener(&#x27;input&#x27;, event =&gt; { state.writings[selectedDay] = event.target.value; saveState(); root.querySelector(&#x27;#f365-writing-count&#x27;).textContent = words(event.target.value); });
+      const readingArea = root.querySelector(&#x27;#f365-reading-text&#x27;);
+      readingArea.addEventListener(&#x27;pointerup&#x27;, () =&gt; setTimeout(handleReadingSelection, 40));
+      readingArea.addEventListener(&#x27;keyup&#x27;, handleReadingSelection);
+      root.querySelector(&#x27;#f365-annotation-close&#x27;).addEventListener(&#x27;click&#x27;, hideAnnotation);
+      root.querySelector(&#x27;#f365-annotation-speak&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        if (selectedAnnotation) speak(selectedAnnotation.term, .75);
+      });
+      root.querySelector(&#x27;#f365-play&#x27;).addEventListener(&#x27;click&#x27;, startListening);
+      root.querySelector(&#x27;#f365-transcript-toggle&#x27;).addEventListener(&#x27;click&#x27;, event =&gt; { const transcript = root.querySelector(&#x27;#f365-transcript&#x27;); transcript.classList.toggle(&#x27;f365-hidden&#x27;); event.target.textContent = transcript.classList.contains(&#x27;f365-hidden&#x27;) ? &#x27;显示听力原文&#x27; : &#x27;隐藏听力原文&#x27;; });
+      root.querySelector(&#x27;#f365-sentence-play&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; { const sentences = lessonFor(selectedDay).listening.match(/[^.!?]+[.!?]+/g) || [lessonFor(selectedDay).listening]; speak(sentences[sentenceIndex % sentences.length], Number(root.querySelector(&#x27;#f365-rate&#x27;).value)); sentenceIndex += 1; showToast(&#x27;逐句跟读 &#x27; + ((sentenceIndex - 1) % sentences.length + 1) + &#x27; / &#x27; + sentences.length); });
+      root.querySelector(&#x27;#f365-speaking-timer&#x27;).addEventListener(&#x27;click&#x27;, startSpeakingTimer);
+      root.querySelector(&#x27;#f365-checkin&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; { if (!state.completed.includes(selectedDay)) state.completed.push(selectedDay); saveState(); updateProgress(); showToast(&#x27;Day &#x27; + selectedDay + &#x27; 打卡完成&#x27;); });
+      root.querySelector(&#x27;#f365-prev-month&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; { calendarMonth = Math.max(1, calendarMonth - 1); renderCalendar(); });
+      root.querySelector(&#x27;#f365-next-month&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; { calendarMonth = Math.min(12, calendarMonth + 1); renderCalendar(); });
+      root.querySelector(&#x27;#f365-start-exam&#x27;).addEventListener(&#x27;click&#x27;, startExam);
+      root.querySelector(&#x27;#f365-submit-exam&#x27;).addEventListener(&#x27;click&#x27;, submitExam);
+      root.querySelector(&#x27;#f365-exam-audio&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; speak(&#x27;I am flying to Singapore this weekend for a short holiday. I chose a small hotel near the central train station because I want to travel around the city easily. On Saturday morning, I plan to visit a local food market and try a few dishes. In the afternoon, I will meet an old university friend who now works there. I have already checked in online, but I still need to exchange some money and pack a light jacket in case it rains.&#x27;));
+      root.querySelector(&#x27;#f365-speaking-score&#x27;).addEventListener(&#x27;input&#x27;, event =&gt; root.querySelector(&#x27;#f365-speaking-score-label&#x27;).textContent = event.target.value);
+      root.querySelector(&#x27;#f365-writing-score&#x27;).addEventListener(&#x27;input&#x27;, event =&gt; root.querySelector(&#x27;#f365-writing-score-label&#x27;).textContent = event.target.value);
+      root.querySelector(&#x27;#f365-export&#x27;).addEventListener(&#x27;click&#x27;, exportProgress);
+      root.querySelector(&#x27;#f365-import&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; root.querySelector(&#x27;#f365-import-file&#x27;).click());
+      root.querySelector(&#x27;#f365-import-file&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; { if (event.target.files[0]) importProgress(event.target.files[0]); });
+      const weekday = [&#x27;星期日&#x27;,&#x27;星期一&#x27;,&#x27;星期二&#x27;,&#x27;星期三&#x27;,&#x27;星期四&#x27;,&#x27;星期五&#x27;,&#x27;星期六&#x27;][now.getDay()];
+      root.querySelector(&#x27;#f365-date&#x27;).textContent = now.getFullYear() + &#x27;年&#x27; + (now.getMonth()+1) + &#x27;月&#x27; + now.getDate() + &#x27;日 · &#x27; + weekday;
+      renderLesson();
+      renderCalendar();
+    })();
+  &lt;/script&gt;
+&lt;/div&gt;
+
+
+
+
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handleLeave = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>
