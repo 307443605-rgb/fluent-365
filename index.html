@@ -177,7 +177,7 @@ html &gt; body {
   padding: 5px;
   color: var(--foreground);
   background: transparent !important;
-  font-family: var(--font-sans);
+  font-family: var(--font-sans) !important;
   font-size: var(--font-size-normal);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-normal);
@@ -402,6 +402,7 @@ code:not(pre code) {
 .progress {
   display: flex;
   height: 6px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 6px) / 2);
   overflow: hidden;
   border: 0;
   border-radius: var(--radius-full);
@@ -1082,9 +1083,32 @@ html&gt;body{padding:0}&lt;/style&gt;
     #fluent365-app .f365-track i { display: block; width: 0; height: 100%; background: #82d0b2; }
     #fluent365-app .f365-audio-info small { color: #9ca8a1; font-size: 9px; }
     #fluent365-app .f365-rate { border: 1px solid #59635e; border-radius: 4px; padding: 4px; color: #fff; background: #39433e; font-size: 9px; }
-    #fluent365-app .f365-listen-actions { display: flex; gap: 8px; margin-top: 10px; }
+    #fluent365-app .f365-listen-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
     #fluent365-app .f365-text-button { border: 0; color: var(--f365-green); background: transparent; cursor: pointer; font-size: 10px; }
     #fluent365-app .f365-transcript { margin-top: 10px; padding: 14px; border-left: 3px solid var(--f365-amber); background: var(--f365-amber-soft); font-family: Georgia, serif; font-size: 12px; line-height: 1.75; }
+    #fluent365-app .f365-shadowing { margin-top: 12px; padding: 15px; border: 1px solid var(--f365-line); border-radius: 7px; background: var(--f365-bg); }
+    #fluent365-app .f365-shadowing-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    #fluent365-app .f365-shadowing-head strong { font-size: 11px; font-weight: 500; }
+    #fluent365-app .f365-shadowing-head span { color: var(--f365-muted); font-size: 9px; }
+    #fluent365-app .f365-shadowing-current { min-height: 68px; margin: 11px 0; padding: 12px 14px; border-left: 3px solid var(--f365-amber); background: var(--f365-amber-soft); }
+    #fluent365-app .f365-shadowing-current span { color: var(--f365-amber); font-size: 8px; }
+    #fluent365-app .f365-shadowing-current p { margin: 6px 0 0; font-family: Georgia, serif; font-size: 13px; line-height: 1.65; }
+    #fluent365-app .f365-shadowing-controls { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+    #fluent365-app .f365-shadowing-control {
+      min-height: 38px; display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+      border: 1px solid var(--f365-line); border-radius: 5px; color: var(--f365-ink); background: var(--f365-paper); cursor: pointer; font-size: 9px; white-space: nowrap;
+    }
+    #fluent365-app .f365-shadowing-control.primary { border-color: var(--f365-green); color: #fff; background: var(--f365-green); }
+    #fluent365-app .f365-shadowing-control:disabled { opacity: .45; cursor: not-allowed; }
+    #fluent365-app .f365-segment-list { display: grid; gap: 6px; margin-top: 12px; }
+    #fluent365-app .f365-segment {
+      width: 100%; display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 8px; align-items: start;
+      padding: 9px 10px; border: 1px solid var(--f365-line); border-radius: 5px; color: var(--f365-ink); background: var(--f365-paper); cursor: pointer; text-align: left;
+    }
+    #fluent365-app .f365-segment span { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 4px; color: var(--f365-muted); background: var(--f365-bg); font-size: 8px; }
+    #fluent365-app .f365-segment p { margin: 1px 0 0; font-family: Georgia, serif; font-size: 10px; line-height: 1.55; }
+    #fluent365-app .f365-segment.f365-active { border-color: var(--f365-green); background: var(--f365-green-soft); }
+    #fluent365-app .f365-segment.f365-active span { color: #fff; background: var(--f365-green); }
     #fluent365-app .f365-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
     #fluent365-app .f365-steps div { padding: 10px; background: var(--f365-bg); }
     #fluent365-app .f365-steps strong { display: block; margin-bottom: 3px; font-size: 10px; font-weight: 500; }
@@ -1261,6 +1285,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       #fluent365-app .f365-schedule { grid-template-columns: repeat(2, 1fr); }
       #fluent365-app .f365-steps { grid-template-columns: 1fr; }
       #fluent365-app .f365-speaking { align-items: flex-start; }
+      #fluent365-app .f365-shadowing-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       #fluent365-app .f365-vocab th:nth-child(3), #fluent365-app .f365-vocab td:nth-child(3) { display: none; }
       #fluent365-app .f365-aside { grid-template-columns: 1fr; }
       #fluent365-app .f365-aside .f365-checkin, #fluent365-app .f365-aside .f365-save { grid-column: auto; }
@@ -1353,8 +1378,19 @@ html&gt;body{padding:0}&lt;/style&gt;
               &lt;div class=&quot;f365-audio-info&quot;&gt;&lt;strong id=&quot;f365-listening-title&quot;&gt;&lt;/strong&gt;&lt;div class=&quot;f365-track&quot;&gt;&lt;i id=&quot;f365-audio-bar&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;small id=&quot;f365-audio-status&quot;&gt;准备播放&lt;/small&gt;&lt;/div&gt;
               &lt;select class=&quot;f365-rate&quot; id=&quot;f365-rate&quot; aria-label=&quot;听力语速&quot;&gt;&lt;option value=&quot;.75&quot;&gt;0.75×&lt;/option&gt;&lt;option value=&quot;.9&quot; selected&gt;0.9×&lt;/option&gt;&lt;option value=&quot;1&quot;&gt;1.0×&lt;/option&gt;&lt;option value=&quot;1.15&quot;&gt;1.15×&lt;/option&gt;&lt;/select&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;f365-listen-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;f365-text-button&quot; id=&quot;f365-transcript-toggle&quot;&gt;显示听力原文&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;f365-text-button&quot; id=&quot;f365-sentence-play&quot;&gt;逐句跟读&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-listen-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;f365-text-button&quot; id=&quot;f365-transcript-toggle&quot;&gt;显示听力原文&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;f365-text-button&quot; id=&quot;f365-sentence-play&quot;&gt;打开逐句练习&lt;/button&gt;&lt;/div&gt;
             &lt;div class=&quot;f365-transcript f365-hidden&quot; id=&quot;f365-transcript&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-shadowing f365-hidden&quot; id=&quot;f365-shadowing&quot;&gt;
+              &lt;div class=&quot;f365-shadowing-head&quot;&gt;&lt;strong&gt;逐句跟读播放器&lt;/strong&gt;&lt;span id=&quot;f365-segment-counter&quot;&gt;第 1 句&lt;/span&gt;&lt;/div&gt;
+              &lt;div class=&quot;f365-shadowing-current&quot;&gt;&lt;span&gt;CURRENT SEGMENT&lt;/span&gt;&lt;p id=&quot;f365-segment-text&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+              &lt;div class=&quot;f365-shadowing-controls&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;f365-shadowing-control&quot; id=&quot;f365-segment-prev&quot;&gt;&lt;i data-lucide=&quot;skip-back&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;上一句&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;f365-shadowing-control primary&quot; id=&quot;f365-segment-pause&quot;&gt;&lt;i data-lucide=&quot;pause&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;暂停&lt;/span&gt;&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;f365-shadowing-control&quot; id=&quot;f365-segment-repeat&quot;&gt;&lt;i data-lucide=&quot;repeat-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;重播本句&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;f365-shadowing-control&quot; id=&quot;f365-segment-next&quot;&gt;&lt;i data-lucide=&quot;skip-forward&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;下一句&lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;f365-segment-list&quot; id=&quot;f365-segment-list&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
             &lt;div class=&quot;f365-steps&quot;&gt;&lt;div&gt;&lt;strong&gt;1 · 盲听&lt;/strong&gt;&lt;span&gt;不看原文听一遍，记下关键词。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;2 · 跟读&lt;/strong&gt;&lt;span&gt;逐句模仿重音、语调和停顿。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;3 · 复述&lt;/strong&gt;&lt;span&gt;用 4-5 句话说出核心信息。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
             &lt;div class=&quot;f365-questions&quot;&gt;&lt;h4&gt;听力问题&lt;/h4&gt;&lt;ol id=&quot;f365-listening-questions&quot;&gt;&lt;/ol&gt;&lt;/div&gt;
           &lt;/section&gt;
@@ -1823,6 +1859,67 @@ html&gt;body{padding:0}&lt;/style&gt;
         utterance.onend = () =&gt; { if (onend) onend(); };
         speechSynthesis.speak(utterance);
       }
+      function listeningSentences() {
+        return (lessonFor(selectedDay).listening.match(/[^.!?]+[.!?]+/g) || [lessonFor(selectedDay).listening]).map(sentence =&gt; sentence.trim());
+      }
+      function setSegmentPauseButton(paused) {
+        const button = root.querySelector(&#x27;#f365-segment-pause&#x27;);
+        button.innerHTML = &#x27;&lt;i data-lucide=&quot;&#x27; + (paused ? &#x27;play&#x27; : &#x27;pause&#x27;) + &#x27;&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;&#x27; + (paused ? &#x27;继续&#x27; : &#x27;暂停&#x27;) + &#x27;&lt;/span&gt;&#x27;;
+        if (window.lucide) lucide.createIcons({ attrs:{ width:16, height:16 } });
+      }
+      function renderShadowing() {
+        const sentences = listeningSentences();
+        sentenceIndex = Math.max(0, Math.min(sentences.length - 1, sentenceIndex));
+        root.querySelector(&#x27;#f365-segment-counter&#x27;).textContent = &#x27;第 &#x27; + (sentenceIndex + 1) + &#x27; / &#x27; + sentences.length + &#x27; 句&#x27;;
+        root.querySelector(&#x27;#f365-segment-text&#x27;).textContent = sentences[sentenceIndex];
+        root.querySelector(&#x27;#f365-segment-prev&#x27;).disabled = sentenceIndex === 0;
+        root.querySelector(&#x27;#f365-segment-next&#x27;).disabled = sentenceIndex === sentences.length - 1;
+        root.querySelector(&#x27;#f365-segment-list&#x27;).innerHTML = sentences.map((sentence, index) =&gt;
+          &#x27;&lt;button type=&quot;button&quot; class=&quot;f365-segment &#x27; + (index === sentenceIndex ? &#x27;f365-active&#x27; : &#x27;&#x27;) + &#x27;&quot; data-segment=&quot;&#x27; + index + &#x27;&quot;&gt;&lt;span&gt;&#x27; + String(index + 1).padStart(2, &#x27;0&#x27;) + &#x27;&lt;/span&gt;&lt;p&gt;&#x27; + sentence + &#x27;&lt;/p&gt;&lt;/button&gt;&#x27;
+        ).join(&#x27;&#x27;);
+      }
+      function playListeningSegment(index = sentenceIndex) {
+        const sentences = listeningSentences();
+        sentenceIndex = Math.max(0, Math.min(sentences.length - 1, index));
+        clearInterval(speechTimer);
+        root.querySelector(&#x27;#f365-audio-bar&#x27;).style.width = &#x27;0%&#x27;;
+        renderShadowing();
+        setSegmentPauseButton(false);
+        root.querySelector(&#x27;#f365-audio-status&#x27;).textContent = &#x27;逐句播放 · 第 &#x27; + (sentenceIndex + 1) + &#x27; 句&#x27;;
+        speak(sentences[sentenceIndex], Number(root.querySelector(&#x27;#f365-rate&#x27;).value), () =&gt; {
+          root.querySelector(&#x27;#f365-audio-status&#x27;).textContent = &#x27;本句播放完成，可重播或继续&#x27;;
+          setSegmentPauseButton(false);
+        });
+      }
+      function toggleSegmentPause() {
+        if (!(&#x27;speechSynthesis&#x27; in window)) { showToast(&#x27;当前浏览器不支持语音播放&#x27;); return; }
+        if (speechSynthesis.paused) {
+          speechSynthesis.resume();
+          setSegmentPauseButton(false);
+          root.querySelector(&#x27;#f365-audio-status&#x27;).textContent = &#x27;继续播放第 &#x27; + (sentenceIndex + 1) + &#x27; 句&#x27;;
+        } else if (speechSynthesis.speaking) {
+          speechSynthesis.pause();
+          setSegmentPauseButton(true);
+          root.querySelector(&#x27;#f365-audio-status&#x27;).textContent = &#x27;已暂停第 &#x27; + (sentenceIndex + 1) + &#x27; 句&#x27;;
+        } else {
+          playListeningSegment(sentenceIndex);
+        }
+      }
+      function toggleShadowing() {
+        const panel = root.querySelector(&#x27;#f365-shadowing&#x27;);
+        const opening = panel.classList.contains(&#x27;f365-hidden&#x27;);
+        panel.classList.toggle(&#x27;f365-hidden&#x27;, !opening);
+        root.querySelector(&#x27;#f365-sentence-play&#x27;).textContent = opening ? &#x27;收起逐句练习&#x27; : &#x27;打开逐句练习&#x27;;
+        if (opening) {
+          renderShadowing();
+          playListeningSegment(sentenceIndex);
+        } else {
+          if (&#x27;speechSynthesis&#x27; in window) speechSynthesis.cancel();
+          clearInterval(speechTimer);
+          setSegmentPauseButton(false);
+          root.querySelector(&#x27;#f365-audio-status&#x27;).textContent = &#x27;逐句练习已停止&#x27;;
+        }
+      }
       let activeChineseRecognition = null;
       function setTranslationStatus(prefix, message) {
         root.querySelector(&#x27;#f365-&#x27; + prefix + &#x27;-translation-status&#x27;).textContent = message;
@@ -1999,6 +2096,13 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#f365-writing-count&#x27;).textContent = words(root.querySelector(&#x27;#f365-writing&#x27;).value);
         root.querySelector(&#x27;#f365-transcript&#x27;).classList.add(&#x27;f365-hidden&#x27;);
         root.querySelector(&#x27;#f365-transcript-toggle&#x27;).textContent = &#x27;显示听力原文&#x27;;
+        root.querySelector(&#x27;#f365-shadowing&#x27;).classList.add(&#x27;f365-hidden&#x27;);
+        root.querySelector(&#x27;#f365-sentence-play&#x27;).textContent = &#x27;打开逐句练习&#x27;;
+        sentenceIndex = 0;
+        if (&#x27;speechSynthesis&#x27; in window) speechSynthesis.cancel();
+        clearInterval(speechTimer);
+        setSegmentPauseButton(false);
+        renderShadowing();
         hideAnnotation();
         root.querySelectorAll(&#x27;.f365-complete&#x27;).forEach(button =&gt; button.classList.toggle(&#x27;f365-done&#x27;, tasks.includes(button.dataset.task)));
         updateProgress();
@@ -2048,6 +2152,9 @@ html&gt;body{padding:0}&lt;/style&gt;
       }
       function startListening() {
         const lesson = lessonFor(selectedDay);
+        root.querySelector(&#x27;#f365-shadowing&#x27;).classList.add(&#x27;f365-hidden&#x27;);
+        root.querySelector(&#x27;#f365-sentence-play&#x27;).textContent = &#x27;打开逐句练习&#x27;;
+        setSegmentPauseButton(false);
         const status = root.querySelector(&#x27;#f365-audio-status&#x27;);
         const bar = root.querySelector(&#x27;#f365-audio-bar&#x27;);
         const seconds = Math.max(20, lesson.listening.split(/\s+/).length / (150 * Number(root.querySelector(&#x27;#f365-rate&#x27;).value)) * 60);
@@ -2111,7 +2218,15 @@ html&gt;body{padding:0}&lt;/style&gt;
       });
       root.querySelector(&#x27;#f365-play&#x27;).addEventListener(&#x27;click&#x27;, startListening);
       root.querySelector(&#x27;#f365-transcript-toggle&#x27;).addEventListener(&#x27;click&#x27;, event =&gt; { const transcript = root.querySelector(&#x27;#f365-transcript&#x27;); transcript.classList.toggle(&#x27;f365-hidden&#x27;); event.target.textContent = transcript.classList.contains(&#x27;f365-hidden&#x27;) ? &#x27;显示听力原文&#x27; : &#x27;隐藏听力原文&#x27;; });
-      root.querySelector(&#x27;#f365-sentence-play&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; { const sentences = lessonFor(selectedDay).listening.match(/[^.!?]+[.!?]+/g) || [lessonFor(selectedDay).listening]; speak(sentences[sentenceIndex % sentences.length], Number(root.querySelector(&#x27;#f365-rate&#x27;).value)); sentenceIndex += 1; showToast(&#x27;逐句跟读 &#x27; + ((sentenceIndex - 1) % sentences.length + 1) + &#x27; / &#x27; + sentences.length); });
+      root.querySelector(&#x27;#f365-sentence-play&#x27;).addEventListener(&#x27;click&#x27;, toggleShadowing);
+      root.querySelector(&#x27;#f365-segment-prev&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; playListeningSegment(sentenceIndex - 1));
+      root.querySelector(&#x27;#f365-segment-pause&#x27;).addEventListener(&#x27;click&#x27;, toggleSegmentPause);
+      root.querySelector(&#x27;#f365-segment-repeat&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; playListeningSegment(sentenceIndex));
+      root.querySelector(&#x27;#f365-segment-next&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; playListeningSegment(sentenceIndex + 1));
+      root.querySelector(&#x27;#f365-segment-list&#x27;).addEventListener(&#x27;click&#x27;, event =&gt; {
+        const segment = event.target.closest(&#x27;[data-segment]&#x27;);
+        if (segment) playListeningSegment(Number(segment.dataset.segment));
+      });
       root.querySelector(&#x27;#f365-speaking-timer&#x27;).addEventListener(&#x27;click&#x27;, startSpeakingTimer);
       wireChineseTool(&#x27;speaking&#x27;, false);
       wireChineseTool(&#x27;writing&#x27;, true);
