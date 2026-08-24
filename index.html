@@ -908,25 +908,56 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;div id=&quot;fluent365-app&quot;&gt;
   &lt;style&gt;
     #fluent365-app {
-      --f365-bg: light-dark(#f4f7f5, #171c19);
-      --f365-paper: light-dark(#ffffff, #232a26);
+      --f365-bg: light-dark(#eef5f1, #171c19);
+      --f365-paper: light-dark(#fffefd, #232a26);
       --f365-ink: light-dark(#202722, #eef4f0);
-      --f365-muted: light-dark(#66706a, #a8b3ac);
-      --f365-line: light-dark(#dfe5e1, #3b453f);
+      --f365-muted: light-dark(#647068, #a8b3ac);
+      --f365-line: light-dark(#d7e2db, #3b453f);
       --f365-green: light-dark(#176b51, #65c6a0);
-      --f365-green-soft: light-dark(#dcefe7, #26493b);
+      --f365-green-soft: light-dark(#dff1e8, #26493b);
       --f365-coral: light-dark(#d85f47, #ee8a73);
-      --f365-coral-soft: light-dark(#f9e5df, #533229);
+      --f365-coral-soft: light-dark(#fae9e3, #533229);
       --f365-amber: light-dark(#a96f13, #e5b85f);
-      --f365-amber-soft: light-dark(#f8ecd3, #4e4126);
+      --f365-amber-soft: light-dark(#faefd9, #4e4126);
       --f365-blue: light-dark(#2874a6, #74b9e5);
-      --f365-blue-soft: light-dark(#dfeef7, #264557);
+      --f365-blue-soft: light-dark(#e2eff7, #264557);
+      --f365-purple: light-dark(#7563a7, #b4a2dc);
+      --f365-purple-soft: light-dark(#ede9f7, #403653);
+      position: relative;
+      isolation: isolate;
       color: var(--f365-ink);
       background: var(--f365-bg);
       font-family: Inter, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, system-ui, sans-serif;
       border-radius: 8px;
       overflow: hidden;
     }
+    #fluent365-app .f365-top, #fluent365-app .f365-main { position: relative; z-index: 2; }
+    #fluent365-app .f365-sticker-board { position: absolute; z-index: 1; inset: 78px 0 0; overflow: hidden; pointer-events: none; }
+    #fluent365-app .f365-sticker {
+      --f365-sticker-color: var(--f365-green);
+      position: absolute; width: 46px; height: 46px; display: grid; place-items: center;
+      border: 1px solid color-mix(in srgb, var(--f365-sticker-color) 28%, var(--f365-line));
+      border-radius: 8px; color: var(--f365-sticker-color);
+      background: color-mix(in srgb, var(--f365-sticker-color) 13%, var(--f365-paper));
+      box-shadow: 0 5px 12px rgba(31, 63, 47, .12);
+    }
+    #fluent365-app .f365-sticker::before {
+      content: &quot;&quot;; position: absolute; width: 23px; height: 7px; top: -5px; left: 50%;
+      background: light-dark(rgba(255,255,255,.82), rgba(215,226,219,.34)); transform: translateX(-50%) rotate(-3deg);
+    }
+    #fluent365-app .f365-sticker svg { width: 20px; height: 20px; }
+    #fluent365-app .f365-sticker.coral { --f365-sticker-color: var(--f365-coral); }
+    #fluent365-app .f365-sticker.amber { --f365-sticker-color: var(--f365-amber); }
+    #fluent365-app .f365-sticker.blue { --f365-sticker-color: var(--f365-blue); }
+    #fluent365-app .f365-sticker.purple { --f365-sticker-color: var(--f365-purple); }
+    #fluent365-app .f365-sticker.s1 { top: 28px; right: 7px; transform: rotate(7deg); }
+    #fluent365-app .f365-sticker.s2 { top: 245px; left: 6px; transform: rotate(-8deg); }
+    #fluent365-app .f365-sticker.s3 { top: 570px; right: 7px; transform: rotate(-6deg); }
+    #fluent365-app .f365-sticker.s4 { top: 930px; left: 5px; transform: rotate(8deg); }
+    #fluent365-app .f365-sticker.s5 { top: 1280px; right: 6px; transform: rotate(5deg); }
+    #fluent365-app .f365-sticker.s6 { top: 1650px; left: 7px; transform: rotate(-7deg); }
+    #fluent365-app .f365-sticker.s7 { top: 2020px; right: 5px; transform: rotate(-9deg); }
+    #fluent365-app .f365-sticker.s8 { top: 2390px; left: 6px; transform: rotate(6deg); }
     #fluent365-app * { box-sizing: border-box; letter-spacing: 0; }
     #fluent365-app button, #fluent365-app select, #fluent365-app textarea, #fluent365-app input { font: inherit; }
     #fluent365-app button { color: inherit; }
@@ -1275,6 +1306,10 @@ html&gt;body{padding:0}&lt;/style&gt;
       #fluent365-app .f365-aside { position: static; grid-template-columns: 1fr 1fr; }
       #fluent365-app .f365-aside .f365-checkin, #fluent365-app .f365-aside .f365-save { grid-column: 1 / -1; }
       #fluent365-app .f365-calendar { grid-template-columns: repeat(3, 1fr); }
+      #fluent365-app .f365-sticker { width: 38px; height: 38px; opacity: .72; }
+      #fluent365-app .f365-sticker svg { width: 17px; height: 17px; }
+      #fluent365-app .f365-sticker.s6,
+      #fluent365-app .f365-sticker.s8 { display: none; }
     }
     @media (max-width: 460px) {
       #fluent365-app .f365-page-head { align-items: center; }
@@ -1294,8 +1329,26 @@ html&gt;body{padding:0}&lt;/style&gt;
       #fluent365-app .f365-calendar { grid-template-columns: repeat(2, 1fr); }
       #fluent365-app .f365-exam-intro { align-items: flex-start; flex-direction: column; padding: 22px 18px; }
       #fluent365-app .f365-rubric { grid-template-columns: repeat(2, 1fr); }
+      #fluent365-app .f365-sticker { width: 34px; height: 34px; opacity: .62; }
+      #fluent365-app .f365-sticker.s2,
+      #fluent365-app .f365-sticker.s4 { display: none; }
+      #fluent365-app .f365-sticker.s1 { top: 20px; right: 3px; }
+      #fluent365-app .f365-sticker.s3 { top: 620px; right: 2px; }
+      #fluent365-app .f365-sticker.s5 { top: 1280px; right: 3px; }
+      #fluent365-app .f365-sticker.s7 { top: 1940px; right: 2px; }
     }
   &lt;/style&gt;
+
+  &lt;div class=&quot;f365-sticker-board&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;span class=&quot;f365-sticker blue s1&quot;&gt;&lt;i data-lucide=&quot;plane&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class=&quot;f365-sticker coral s2&quot;&gt;&lt;i data-lucide=&quot;dumbbell&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class=&quot;f365-sticker purple s3&quot;&gt;&lt;i data-lucide=&quot;book-open&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class=&quot;f365-sticker amber s4&quot;&gt;&lt;i data-lucide=&quot;headphones&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class=&quot;f365-sticker s5&quot;&gt;&lt;i data-lucide=&quot;message-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class=&quot;f365-sticker amber s6&quot;&gt;&lt;i data-lucide=&quot;chart-candlestick&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class=&quot;f365-sticker coral s7&quot;&gt;&lt;i data-lucide=&quot;pencil-line&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class=&quot;f365-sticker purple s8&quot;&gt;&lt;i data-lucide=&quot;bitcoin&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/div&gt;
 
   &lt;header class=&quot;f365-top&quot;&gt;
     &lt;div class=&quot;f365-brand&quot;&gt;
