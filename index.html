@@ -1750,6 +1750,15 @@ html&gt;body{padding:0}&lt;/style&gt;
     #fluent365-app .f365-shadowing-current { min-height: 68px; margin: 11px 0; padding: 12px 14px; border-left: 3px solid var(--f365-amber); background: var(--f365-amber-soft); }
     #fluent365-app .f365-shadowing-current span { color: var(--f365-amber); font-size: 8px; }
     #fluent365-app .f365-shadowing-current p { margin: 6px 0 0; font-family: Georgia, serif; font-size: 13px; line-height: 1.65; }
+    #fluent365-app .f365-shadowing-context { display: grid; gap: 4px; margin-bottom: 12px; padding: 12px 14px; border-left: 3px solid var(--f365-green); background: var(--f365-green-soft); }
+    #fluent365-app .f365-shadowing-context small { color: var(--f365-green); font-size: 8px; letter-spacing: .08em; }
+    #fluent365-app .f365-shadowing-context strong { font-size: 12px; font-weight: 500; }
+    #fluent365-app .f365-shadowing-context span { color: var(--f365-muted); font-size: 10px; line-height: 1.5; }
+    #fluent365-app .f365-shadowing-status { display: block; margin-top: 9px; color: var(--f365-muted); font-size: 9px; }
+    #fluent365-app .f365-quote { margin-top: 12px; padding: 14px; border-left: 3px solid var(--f365-purple); background: var(--f365-purple-soft); }
+    #fluent365-app .f365-quote small { color: var(--f365-purple); font-size: 8px; letter-spacing: .08em; }
+    #fluent365-app .f365-quote blockquote { margin: 7px 0 5px; font-family: Georgia, serif; font-size: 14px; line-height: 1.55; }
+    #fluent365-app .f365-quote cite { color: var(--f365-muted); font-size: 10px; font-style: normal; }
     #fluent365-app .f365-shadowing-controls { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
     #fluent365-app .f365-shadowing-control {
       min-height: 38px; display: inline-flex; align-items: center; justify-content: center; gap: 5px;
@@ -2051,16 +2060,23 @@ html&gt;body{padding:0}&lt;/style&gt;
           &lt;/section&gt;
 
           &lt;section class=&quot;f365-section&quot;&gt;
-            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num amber&quot;&gt;03&lt;/span&gt;&lt;div&gt;&lt;h3&gt;听力输入与逐句跟读&lt;/h3&gt;&lt;p&gt;听力约 1-3 分钟 · 跟读固定练习 15 分钟&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;listening&quot;&gt;标记听力完成&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num amber&quot;&gt;03&lt;/span&gt;&lt;div&gt;&lt;h3&gt;15 分钟听力输入&lt;/h3&gt;&lt;p&gt;先盲听，再看原文，最后回答问题&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;listening&quot;&gt;标记听力完成&lt;/button&gt;&lt;/div&gt;
             &lt;div class=&quot;f365-player&quot;&gt;
               &lt;button type=&quot;button&quot; class=&quot;f365-play&quot; id=&quot;f365-play&quot; aria-label=&quot;播放听力&quot;&gt;&lt;i data-lucide=&quot;play&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
               &lt;div class=&quot;f365-audio-info&quot;&gt;&lt;strong id=&quot;f365-listening-title&quot;&gt;&lt;/strong&gt;&lt;div class=&quot;f365-track&quot;&gt;&lt;i id=&quot;f365-audio-bar&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;small id=&quot;f365-audio-status&quot;&gt;准备播放&lt;/small&gt;&lt;/div&gt;
               &lt;select class=&quot;f365-rate&quot; id=&quot;f365-rate&quot; aria-label=&quot;听力语速&quot;&gt;&lt;option value=&quot;.75&quot;&gt;0.75×&lt;/option&gt;&lt;option value=&quot;.9&quot; selected&gt;0.9×&lt;/option&gt;&lt;option value=&quot;1&quot;&gt;1.0×&lt;/option&gt;&lt;option value=&quot;1.15&quot;&gt;1.15×&lt;/option&gt;&lt;/select&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;f365-listen-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;f365-text-button&quot; id=&quot;f365-transcript-toggle&quot;&gt;显示听力原文&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;f365-text-button&quot; id=&quot;f365-sentence-play&quot;&gt;打开逐句练习&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-listen-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;f365-text-button&quot; id=&quot;f365-transcript-toggle&quot;&gt;显示听力原文&lt;/button&gt;&lt;/div&gt;
             &lt;div class=&quot;f365-transcript f365-hidden&quot; id=&quot;f365-transcript&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;f365-shadowing f365-hidden&quot; id=&quot;f365-shadowing&quot;&gt;
-              &lt;div class=&quot;f365-shadowing-head&quot;&gt;&lt;div&gt;&lt;strong&gt;逐句跟读播放器 · 15 分钟&lt;/strong&gt;&lt;span id=&quot;f365-segment-counter&quot;&gt;第 1 句&lt;/span&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;shadowing&quot;&gt;标记跟读完成&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-steps&quot;&gt;&lt;div&gt;&lt;strong&gt;1 · 3分钟盲听&lt;/strong&gt;&lt;span&gt;不看原文听一遍，记下关键词和说话人的意图。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;2 · 5分钟看原文&lt;/strong&gt;&lt;span&gt;核对听到的内容，圈出听不清的连读和短语。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;3 · 7分钟回答&lt;/strong&gt;&lt;span&gt;回答问题，再用自己的话说出听力内容。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-questions&quot;&gt;&lt;h4&gt;听力问题&lt;/h4&gt;&lt;ol id=&quot;f365-listening-questions&quot;&gt;&lt;/ol&gt;&lt;/div&gt;
+          &lt;/section&gt;
+
+          &lt;section class=&quot;f365-section&quot;&gt;
+            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num purple&quot;&gt;04&lt;/span&gt;&lt;div&gt;&lt;h3&gt;15 分钟生活化跟读&lt;/h3&gt;&lt;p id=&quot;f365-shadowing-guide&quot;&gt;日常对话 + 经典语录，练习自然语气&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;shadowing&quot;&gt;标记跟读完成&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-shadowing-context&quot;&gt;&lt;small id=&quot;f365-shadowing-label&quot;&gt;DAILY LIFE&lt;/small&gt;&lt;strong id=&quot;f365-shadowing-title&quot;&gt;&lt;/strong&gt;&lt;span id=&quot;f365-shadowing-context-text&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-shadowing&quot; id=&quot;f365-shadowing&quot;&gt;
+              &lt;div class=&quot;f365-shadowing-head&quot;&gt;&lt;div&gt;&lt;strong&gt;逐句跟读播放器 · 15 分钟&lt;/strong&gt;&lt;span id=&quot;f365-segment-counter&quot;&gt;第 1 句&lt;/span&gt;&lt;/div&gt;&lt;span class=&quot;f365-shadowing-status&quot; id=&quot;f365-shadowing-status&quot;&gt;准备跟读&lt;/span&gt;&lt;/div&gt;
               &lt;div class=&quot;f365-shadowing-current&quot;&gt;&lt;span&gt;CURRENT SEGMENT&lt;/span&gt;&lt;p id=&quot;f365-segment-text&quot;&gt;&lt;/p&gt;&lt;/div&gt;
               &lt;div class=&quot;f365-shadowing-controls&quot;&gt;
                 &lt;button type=&quot;button&quot; class=&quot;f365-shadowing-control&quot; id=&quot;f365-segment-prev&quot;&gt;&lt;i data-lucide=&quot;skip-back&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;上一句&lt;/button&gt;
@@ -2070,12 +2086,12 @@ html&gt;body{padding:0}&lt;/style&gt;
               &lt;/div&gt;
               &lt;div class=&quot;f365-segment-list&quot; id=&quot;f365-segment-list&quot;&gt;&lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;f365-steps&quot;&gt;&lt;div&gt;&lt;strong&gt;1 · 3分钟盲听&lt;/strong&gt;&lt;span&gt;不看原文听一遍，记下关键词和语气。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;2 · 8分钟跟读&lt;/strong&gt;&lt;span&gt;逐句暂停、重播，模仿连读、重音和停顿。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;3 · 4分钟复述&lt;/strong&gt;&lt;span&gt;录音或用 4-5 句话复述真实场景。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
-            &lt;div class=&quot;f365-questions&quot;&gt;&lt;h4&gt;听力问题&lt;/h4&gt;&lt;ol id=&quot;f365-listening-questions&quot;&gt;&lt;/ol&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-quote&quot;&gt;&lt;small&gt;CLASSIC QUOTE&lt;/small&gt;&lt;blockquote id=&quot;f365-shadowing-quote&quot;&gt;&lt;/blockquote&gt;&lt;cite id=&quot;f365-shadowing-author&quot;&gt;&lt;/cite&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-steps&quot;&gt;&lt;div&gt;&lt;strong&gt;1 · 3分钟听懂场景&lt;/strong&gt;&lt;span&gt;先听完整对话，注意语气、连读和礼貌表达。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;2 · 8分钟逐句跟读&lt;/strong&gt;&lt;span&gt;暂停、重播，模仿节奏；至少跟读每句两遍。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;3 · 4分钟活用语录&lt;/strong&gt;&lt;span&gt;朗读经典语录，再用它说一个和自己有关的句子。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;/section&gt;
 
           &lt;section class=&quot;f365-section&quot;&gt;
-            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num blue&quot;&gt;04&lt;/span&gt;&lt;div&gt;&lt;h3&gt;90 秒口语&lt;/h3&gt;&lt;p&gt;先完整表达，再修正语法&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;speaking&quot;&gt;标记完成&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num blue&quot;&gt;05&lt;/span&gt;&lt;div&gt;&lt;h3&gt;90 秒口语&lt;/h3&gt;&lt;p&gt;先完整表达，再修正语法&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;speaking&quot;&gt;标记完成&lt;/button&gt;&lt;/div&gt;
             &lt;div class=&quot;f365-speaking&quot;&gt;
               &lt;div&gt;&lt;small&gt;TODAY&#x27;S PROMPT&lt;/small&gt;&lt;h4 id=&quot;f365-speaking-prompt&quot;&gt;&lt;/h4&gt;&lt;p id=&quot;f365-speaking-hints&quot;&gt;&lt;/p&gt;&lt;/div&gt;
               &lt;button type=&quot;button&quot; class=&quot;f365-timer&quot; id=&quot;f365-speaking-timer&quot;&gt;&lt;strong id=&quot;f365-timer-value&quot;&gt;01:30&lt;/strong&gt;&lt;small&gt;开始计时&lt;/small&gt;&lt;/button&gt;
@@ -2103,12 +2119,12 @@ html&gt;body{padding:0}&lt;/style&gt;
           &lt;/section&gt;
 
           &lt;section class=&quot;f365-section&quot;&gt;
-            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num&quot;&gt;05&lt;/span&gt;&lt;div&gt;&lt;h3&gt;实用表达&lt;/h3&gt;&lt;p&gt;点击英文表达可单独朗读&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;vocab&quot;&gt;标记完成&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num&quot;&gt;06&lt;/span&gt;&lt;div&gt;&lt;h3&gt;实用表达&lt;/h3&gt;&lt;p&gt;点击英文表达可单独朗读&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;vocab&quot;&gt;标记完成&lt;/button&gt;&lt;/div&gt;
             &lt;table class=&quot;f365-vocab&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;英文表达&lt;/th&gt;&lt;th&gt;中文&lt;/th&gt;&lt;th&gt;例句&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=&quot;f365-vocab-body&quot;&gt;&lt;/tbody&gt;&lt;/table&gt;
           &lt;/section&gt;
 
           &lt;section class=&quot;f365-section&quot;&gt;
-            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num coral&quot;&gt;06&lt;/span&gt;&lt;div&gt;&lt;h3&gt;写作与复盘&lt;/h3&gt;&lt;p&gt;写完后大声读一遍&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;writing&quot;&gt;标记完成&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;f365-section-head&quot;&gt;&lt;div class=&quot;f365-section-title&quot;&gt;&lt;span class=&quot;f365-num coral&quot;&gt;07&lt;/span&gt;&lt;div&gt;&lt;h3&gt;写作与复盘&lt;/h3&gt;&lt;p&gt;写完后大声读一遍&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;f365-complete&quot; data-task=&quot;writing&quot;&gt;标记完成&lt;/button&gt;&lt;/div&gt;
             &lt;div class=&quot;f365-writing&quot;&gt;
               &lt;label for=&quot;f365-writing&quot; id=&quot;f365-writing-prompt&quot;&gt;&lt;/label&gt;
               &lt;textarea id=&quot;f365-writing&quot; placeholder=&quot;Start writing in English...&quot;&gt;&lt;/textarea&gt;
@@ -2227,6 +2243,88 @@ html&gt;body{padding:0}&lt;/style&gt;
       const topicOrder = [&#x27;travel&#x27;, &#x27;sports&#x27;, &#x27;learning&#x27;, &#x27;stocks&#x27;, &#x27;crypto&#x27;];
       const topicNames = { travel: &#x27;旅游&#x27;, sports: &#x27;运动&#x27;, learning: &#x27;学习&#x27;, stocks: &#x27;股票&#x27;, crypto: &#x27;币圈&#x27; };
       const topicIcons = { travel: &#x27;plane&#x27;, sports: &#x27;dumbbell&#x27;, learning: &#x27;graduation-cap&#x27;, stocks: &#x27;chart-candlestick&#x27;, crypto: &#x27;bitcoin&#x27; };
+      const shadowingUnits = [
+        { label:&#x27;DAILY LIFE · COFFEE SHOP&#x27;, title:&#x27;A quick coffee before work&#x27;, context:&#x27;在咖啡店点单，确认冷热、等待时间和付款方式。&#x27;, script:[
+          &#x27;Hi, could I get a medium latte, please?&#x27;,
+          &#x27;Sure. Would you like it hot or iced?&#x27;,
+          &#x27;Hot, please, and could you make it less sweet?&#x27;,
+          &#x27;No problem. It will take about five minutes.&#x27;,
+          &#x27;That is fine. I will wait over there.&#x27;,
+          &#x27;Thanks. We will call your name when it is ready.&#x27;
+        ], quote:&#x27;Small steps every day add up to big changes.&#x27;, author:&#x27;日常练习语录 · 每天的小步积累会带来大的改变。&#x27; },
+        { label:&#x27;DAILY LIFE · COMMUTING&#x27;, title:&#x27;Catching the right bus&#x27;, context:&#x27;在通勤路上向别人确认路线、站点和下车时间。&#x27;, script:[
+          &#x27;Excuse me, does this bus go to Central Station?&#x27;,
+          &#x27;Yes, but you need to get off at the third stop.&#x27;,
+          &#x27;How long does it usually take from here?&#x27;,
+          &#x27;Around twenty minutes when traffic is light.&#x27;,
+          &#x27;Got it. I will keep an eye on the stops.&#x27;,
+          &#x27;If you are not sure, just ask the driver before you get off.&#x27;
+        ], quote:&#x27;The journey of a thousand miles begins with a single step.&#x27;, author:&#x27;Lao Tzu · 千里之行，始于足下。&#x27; },
+        { label:&#x27;DAILY LIFE · GROCERY STORE&#x27;, title:&#x27;A small change at checkout&#x27;, context:&#x27;在超市结账时发现商品价格不一致，礼貌地请店员核对。&#x27;, script:[
+          &#x27;Hi, I think this item was on sale today.&#x27;,
+          &#x27;Let me check the price on the shelf for you.&#x27;,
+          &#x27;Sure, take your time.&#x27;,
+          &#x27;You are right. The discount did not come through at the register.&#x27;,
+          &#x27;Thanks for checking. Could you apply the sale price?&#x27;,
+          &#x27;Of course. I will fix it before you pay.&#x27;
+        ], quote:&#x27;Well begun is half done.&#x27;, author:&#x27;Aristotle · 良好的开端是成功的一半。&#x27; },
+        { label:&#x27;DAILY LIFE · SHOPPING RETURN&#x27;, title:&#x27;Returning a shirt&#x27;, context:&#x27;在商店退换衣服，说明原因并确认退款或换货。&#x27;, script:[
+          &#x27;Hi, I would like to return this shirt.&#x27;,
+          &#x27;Is there a problem with the size or the quality?&#x27;,
+          &#x27;The size is fine, but the color looks different at home.&#x27;,
+          &#x27;I understand. Do you have the receipt with you?&#x27;,
+          &#x27;Yes, here it is. Could I exchange it for the blue one?&#x27;,
+          &#x27;Absolutely. I will check whether we have your size in stock.&#x27;
+        ], quote:&#x27;It always seems impossible until it is done.&#x27;, author:&#x27;Nelson Mandela · 在完成之前，一切似乎都不可能。&#x27; },
+        { label:&#x27;DAILY LIFE · APPOINTMENT&#x27;, title:&#x27;Making a doctor appointment&#x27;, context:&#x27;打电话预约时间，说明症状，并确认需要携带的资料。&#x27;, script:[
+          &#x27;Good morning. I would like to make an appointment.&#x27;,
+          &#x27;Of course. Is this for a new problem or a follow-up visit?&#x27;,
+          &#x27;It is a new problem. I have had a sore throat since yesterday.&#x27;,
+          &#x27;We have an opening at three thirty this afternoon.&#x27;,
+          &#x27;That works for me. Do I need to bring anything?&#x27;,
+          &#x27;Please bring your ID and arrive ten minutes early.&#x27;
+        ], quote:&#x27;Success is the sum of small efforts, repeated day in and day out.&#x27;, author:&#x27;Robert Collier · 成功来自日复一日重复的小努力。&#x27; },
+        { label:&#x27;DAILY LIFE · HOME REPAIR&#x27;, title:&#x27;Explaining a small repair&#x27;, context:&#x27;向维修人员描述家里的问题，确认费用和到达时间。&#x27;, script:[
+          &#x27;Hi, the kitchen tap has been leaking since last night.&#x27;,
+          &#x27;Is the leak coming from the handle or the pipe below?&#x27;,
+          &#x27;It is coming from the pipe, and the water is spreading across the floor.&#x27;,
+          &#x27;Please turn off the small valve under the sink for now.&#x27;,
+          &#x27;I have done that. When could someone come and take a look?&#x27;,
+          &#x27;We can send a technician this afternoon and explain the cost first.&#x27;
+        ], quote:&#x27;The best way out is always through.&#x27;, author:&#x27;Robert Frost · 解决问题最好的办法，是一步步穿过去。&#x27; },
+        { label:&#x27;DAILY LIFE · GYM&#x27;, title:&#x27;Joining a beginner class&#x27;, context:&#x27;在健身房询问入门课程，表达自己的目标并确认动作要求。&#x27;, script:[
+          &#x27;Hi, is this the beginner strength class?&#x27;,
+          &#x27;Yes, it is. Have you done strength training before?&#x27;,
+          &#x27;Only a little. I want to learn the movements safely.&#x27;,
+          &#x27;That is exactly what this class is for.&#x27;,
+          &#x27;Great. Should I start with a light weight?&#x27;,
+          &#x27;Yes. Focus on your form first, and increase the weight slowly.&#x27;
+        ], quote:&#x27;You miss 100% of the shots you do not take.&#x27;, author:&#x27;Wayne Gretzky · 你不去尝试，就百分之百不会成功。&#x27; },
+        { label:&#x27;DAILY LIFE · PHONE CALL&#x27;, title:&#x27;Checking on a delivery&#x27;, context:&#x27;给快递客服打电话，核对包裹状态并请求下一步安排。&#x27;, script:[
+          &#x27;Hello, I am calling about a package that has not arrived yet.&#x27;,
+          &#x27;I can check that for you. Could you give me the tracking number?&#x27;,
+          &#x27;Sure, it is 4582-19. The tracking page has not changed since Monday.&#x27;,
+          &#x27;I see it. The package is waiting at the local distribution center.&#x27;,
+          &#x27;Could it be delivered tomorrow morning?&#x27;,
+          &#x27;I will add a delivery request and send you an update by text.&#x27;
+        ], quote:&#x27;Act as if what you do makes a difference. It does.&#x27;, author:&#x27;William James · 去做，相信你的行动会产生影响；它确实会。&#x27; },
+        { label:&#x27;DAILY LIFE · WORKPLACE&#x27;, title:&#x27;A natural chat with a colleague&#x27;, context:&#x27;和同事聊周末计划，顺便提出一个简单、礼貌的工作请求。&#x27;, script:[
+          &#x27;Hey, do you have any plans for the weekend?&#x27;,
+          &#x27;I am thinking about visiting a new market downtown.&#x27;,
+          &#x27;That sounds fun. I have heard the food there is great.&#x27;,
+          &#x27;I hope so. What about you?&#x27;,
+          &#x27;I will probably stay home, but could you send me the meeting notes later?&#x27;,
+          &#x27;Sure, I will send them before I leave today.&#x27;
+        ], quote:&#x27;The only way to do great work is to love what you do.&#x27;, author:&#x27;Steve Jobs · 做好工作的方式之一，是热爱你所做的事。&#x27; },
+        { label:&#x27;DAILY LIFE · MAKING PLANS&#x27;, title:&#x27;Changing plans with a friend&#x27;, context:&#x27;朋友临时有事时，表达理解、提出新时间并把计划说清楚。&#x27;, script:[
+          &#x27;I am sorry, but I need to change our plans for tonight.&#x27;,
+          &#x27;No worries. Is everything okay?&#x27;,
+          &#x27;Yes, I just need to help my sister with something.&#x27;,
+          &#x27;That is fine. Would tomorrow evening work instead?&#x27;,
+          &#x27;Tomorrow is perfect. How about seven at the same restaurant?&#x27;,
+          &#x27;Sounds good. I will message you when I am on my way.&#x27;
+        ], quote:&#x27;If you want to go fast, go alone; if you want to go far, go together.&#x27;, author:&#x27;African proverb · 想走得快，就独自走；想走得远，就一起走。&#x27; }
+      ];
       let selectedAnnotation = null;
       const commonAnnotations = {
         announcement:&#x27;广播；通知&#x27;, nervous:&#x27;紧张的&#x27;, afraid:&#x27;害怕的&#x27;, latest:&#x27;最近的；最新的&#x27;, departure:&#x27;出发；离开&#x27;, employee:&#x27;员工&#x27;,
@@ -2525,6 +2623,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         }
       }
       function lessonFor(day) { return lessons[(day - 1) % lessons.length]; }
+      function shadowingFor(day) { return shadowingUnits[(day - 1) % shadowingUnits.length]; }
       function taskState(day) { return state.tasks[day] || []; }
       function words(text) { return text.trim() ? text.trim().split(/\s+/).length : 0; }
       function showToast(message) {
@@ -2538,16 +2637,23 @@ html&gt;body{padding:0}&lt;/style&gt;
         utterance.onend = () =&gt; { if (onend) onend(); };
         speechSynthesis.speak(utterance);
       }
-      function listeningSentences() {
-        return (lessonFor(selectedDay).listening.match(/[^.!?]+[.!?]+/g) || [lessonFor(selectedDay).listening]).map(sentence =&gt; sentence.trim());
-      }
+      function shadowingSentences() { return shadowingFor(selectedDay).script; }
       function setSegmentPauseButton(paused) {
         const button = root.querySelector(&#x27;#f365-segment-pause&#x27;);
         button.innerHTML = &#x27;&lt;i data-lucide=&quot;&#x27; + (paused ? &#x27;play&#x27; : &#x27;pause&#x27;) + &#x27;&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;&#x27; + (paused ? &#x27;继续&#x27; : &#x27;暂停&#x27;) + &#x27;&lt;/span&gt;&#x27;;
         if (window.lucide) lucide.createIcons({ attrs:{ width:16, height:16 } });
       }
+      function renderShadowingUnit() {
+        const unit = shadowingFor(selectedDay);
+        root.querySelector(&#x27;#f365-shadowing-label&#x27;).textContent = unit.label;
+        root.querySelector(&#x27;#f365-shadowing-title&#x27;).textContent = unit.title;
+        root.querySelector(&#x27;#f365-shadowing-context-text&#x27;).textContent = unit.context;
+        root.querySelector(&#x27;#f365-shadowing-quote&#x27;).textContent = &#x27;“&#x27; + unit.quote + &#x27;”&#x27;;
+        root.querySelector(&#x27;#f365-shadowing-author&#x27;).textContent = &#x27;— &#x27; + unit.author;
+        root.querySelector(&#x27;#f365-shadowing-status&#x27;).textContent = &#x27;准备跟读&#x27;;
+      }
       function renderShadowing() {
-        const sentences = listeningSentences();
+        const sentences = shadowingSentences();
         sentenceIndex = Math.max(0, Math.min(sentences.length - 1, sentenceIndex));
         root.querySelector(&#x27;#f365-segment-counter&#x27;).textContent = &#x27;第 &#x27; + (sentenceIndex + 1) + &#x27; / &#x27; + sentences.length + &#x27; 句&#x27;;
         root.querySelector(&#x27;#f365-segment-text&#x27;).textContent = sentences[sentenceIndex];
@@ -2558,15 +2664,15 @@ html&gt;body{padding:0}&lt;/style&gt;
         ).join(&#x27;&#x27;);
       }
       function playListeningSegment(index = sentenceIndex) {
-        const sentences = listeningSentences();
+        const sentences = shadowingSentences();
         sentenceIndex = Math.max(0, Math.min(sentences.length - 1, index));
         clearInterval(speechTimer);
         root.querySelector(&#x27;#f365-audio-bar&#x27;).style.width = &#x27;0%&#x27;;
         renderShadowing();
         setSegmentPauseButton(false);
-        root.querySelector(&#x27;#f365-audio-status&#x27;).textContent = &#x27;逐句播放 · 第 &#x27; + (sentenceIndex + 1) + &#x27; 句&#x27;;
+        root.querySelector(&#x27;#f365-shadowing-status&#x27;).textContent = &#x27;播放第 &#x27; + (sentenceIndex + 1) + &#x27; 句&#x27;;
         speak(sentences[sentenceIndex], Number(root.querySelector(&#x27;#f365-rate&#x27;).value), () =&gt; {
-          root.querySelector(&#x27;#f365-audio-status&#x27;).textContent = &#x27;本句播放完成，可重播或继续&#x27;;
+          root.querySelector(&#x27;#f365-shadowing-status&#x27;).textContent = &#x27;本句完成，可重播或继续&#x27;;
           setSegmentPauseButton(false);
         });
       }
@@ -2575,28 +2681,13 @@ html&gt;body{padding:0}&lt;/style&gt;
         if (speechSynthesis.paused) {
           speechSynthesis.resume();
           setSegmentPauseButton(false);
-          root.querySelector(&#x27;#f365-audio-status&#x27;).textContent = &#x27;继续播放第 &#x27; + (sentenceIndex + 1) + &#x27; 句&#x27;;
+          root.querySelector(&#x27;#f365-shadowing-status&#x27;).textContent = &#x27;继续播放第 &#x27; + (sentenceIndex + 1) + &#x27; 句&#x27;;
         } else if (speechSynthesis.speaking) {
           speechSynthesis.pause();
           setSegmentPauseButton(true);
-          root.querySelector(&#x27;#f365-audio-status&#x27;).textContent = &#x27;已暂停第 &#x27; + (sentenceIndex + 1) + &#x27; 句&#x27;;
+          root.querySelector(&#x27;#f365-shadowing-status&#x27;).textContent = &#x27;已暂停第 &#x27; + (sentenceIndex + 1) + &#x27; 句&#x27;;
         } else {
           playListeningSegment(sentenceIndex);
-        }
-      }
-      function toggleShadowing() {
-        const panel = root.querySelector(&#x27;#f365-shadowing&#x27;);
-        const opening = panel.classList.contains(&#x27;f365-hidden&#x27;);
-        panel.classList.toggle(&#x27;f365-hidden&#x27;, !opening);
-        root.querySelector(&#x27;#f365-sentence-play&#x27;).textContent = opening ? &#x27;收起逐句练习&#x27; : &#x27;打开逐句练习&#x27;;
-        if (opening) {
-          renderShadowing();
-          playListeningSegment(sentenceIndex);
-        } else {
-          if (&#x27;speechSynthesis&#x27; in window) speechSynthesis.cancel();
-          clearInterval(speechTimer);
-          setSegmentPauseButton(false);
-          root.querySelector(&#x27;#f365-audio-status&#x27;).textContent = &#x27;逐句练习已停止&#x27;;
         }
       }
       let activeChineseRecognition = null;
@@ -2775,8 +2866,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#f365-writing-count&#x27;).textContent = words(root.querySelector(&#x27;#f365-writing&#x27;).value);
         root.querySelector(&#x27;#f365-transcript&#x27;).classList.add(&#x27;f365-hidden&#x27;);
         root.querySelector(&#x27;#f365-transcript-toggle&#x27;).textContent = &#x27;显示听力原文&#x27;;
-        root.querySelector(&#x27;#f365-shadowing&#x27;).classList.add(&#x27;f365-hidden&#x27;);
-        root.querySelector(&#x27;#f365-sentence-play&#x27;).textContent = &#x27;打开逐句练习&#x27;;
+        renderShadowingUnit();
         sentenceIndex = 0;
         if (&#x27;speechSynthesis&#x27; in window) speechSynthesis.cancel();
         clearInterval(speechTimer);
@@ -2831,8 +2921,6 @@ html&gt;body{padding:0}&lt;/style&gt;
       }
       function startListening() {
         const lesson = lessonFor(selectedDay);
-        root.querySelector(&#x27;#f365-shadowing&#x27;).classList.add(&#x27;f365-hidden&#x27;);
-        root.querySelector(&#x27;#f365-sentence-play&#x27;).textContent = &#x27;打开逐句练习&#x27;;
         setSegmentPauseButton(false);
         const status = root.querySelector(&#x27;#f365-audio-status&#x27;);
         const bar = root.querySelector(&#x27;#f365-audio-bar&#x27;);
@@ -2897,7 +2985,6 @@ html&gt;body{padding:0}&lt;/style&gt;
       });
       root.querySelector(&#x27;#f365-play&#x27;).addEventListener(&#x27;click&#x27;, startListening);
       root.querySelector(&#x27;#f365-transcript-toggle&#x27;).addEventListener(&#x27;click&#x27;, event =&gt; { const transcript = root.querySelector(&#x27;#f365-transcript&#x27;); transcript.classList.toggle(&#x27;f365-hidden&#x27;); event.target.textContent = transcript.classList.contains(&#x27;f365-hidden&#x27;) ? &#x27;显示听力原文&#x27; : &#x27;隐藏听力原文&#x27;; });
-      root.querySelector(&#x27;#f365-sentence-play&#x27;).addEventListener(&#x27;click&#x27;, toggleShadowing);
       root.querySelector(&#x27;#f365-segment-prev&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; playListeningSegment(sentenceIndex - 1));
       root.querySelector(&#x27;#f365-segment-pause&#x27;).addEventListener(&#x27;click&#x27;, toggleSegmentPause);
       root.querySelector(&#x27;#f365-segment-repeat&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; playListeningSegment(sentenceIndex));
